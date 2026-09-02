@@ -752,13 +752,10 @@ export default function Home() {
 
         <div className="mre-image-overlay"></div>
 
-        <div className="mre-image-badge">
-          
-
-          <small>Founder </small>
-          <small>Rahul Manghrani </small>
-
-        </div>
+       <div className="mre-image-badge">
+  <span className="mre-founder-name">Rahul Manghrani</span>
+  <span className="mre-founder-designation">Founder</span>
+</div>
 
       </div>
 
@@ -975,16 +972,9 @@ export default function Home() {
 }
 
 .mre-image-badge span{
-  width:48px;
-  height:48px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:#ff4136;
+
   color:#ffffff;
-  font-size:15px;
-  font-weight:700;
+ 
 }
 
 .mre-image-badge small{
@@ -993,6 +983,27 @@ export default function Home() {
   letter-spacing:1.2px;
   text-transform:uppercase;
   font-weight:600;
+}
+  .mre-image-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center text */
+  gap: 2px;
+}
+
+.mre-founder-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mre-founder-designation {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.8;
+  line-height: 1.2;
 }
 
 
