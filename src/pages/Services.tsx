@@ -95,10 +95,9 @@ export default function Services() {
               </div>
               <div className="col-lg-4">
                 <div className="renvia-button text-center text-lg-end">
-                  <Link to="/contact" className="theme-btn style-one">
-                    Contact Us
- <i className="far fa-arrow-right" />
-                  </Link>
+                  <a href="#consultation-form" className="theme-btn style-one">
+                    Request Consultation <i className="far fa-arrow-right" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -106,7 +105,7 @@ export default function Services() {
         </section>
 
         {/* ====== Start Contact Section ====== */}
-        <section className="renvia-contact_two pt-120 pb-120 p-r z-1">
+        <section id="consultation-form" className="renvia-contact_two pt-120 pb-120 p-r z-1">
           <div className="contact-map">
             <img src="/assets/images/innerpage/bg/map.png" alt="map" />
           </div>

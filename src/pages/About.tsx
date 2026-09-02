@@ -131,8 +131,8 @@ export default function About() {
                       </div>
                     </div>
                     <div className="renvia-button">
-                      <Link to="/contact" className="theme-btn style-one">
-                       Contact Us <i className="far fa-arrow-right" />
+                      <Link to="/contact#consultation-form" className="theme-btn style-one">
+                       Request Consultation <i className="far fa-arrow-right" />
                       </Link>
                     </div>
                   </div>

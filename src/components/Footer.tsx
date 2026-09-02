@@ -42,7 +42,7 @@ export default function Footer({
               </div>
               <div className="col-lg-4">
                 <div className="renvia-button text-lg-end mb-60 text-center">
-                  <Link to="/contact" className="theme-btn style-one">
+                  <Link to="/contact#consultation-form" className="theme-btn style-one">
                     Request Consultation <i className="far fa-arrow-right" />
                   </Link>
                 </div>

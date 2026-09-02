@@ -2178,7 +2178,7 @@ label {
 }
 @media (max-width: 767.98px) {
   .renvia-about_one .renvia-image-box {
-    min-height: 470px;
+    min-height: clamp(250px, 55vw, 360px);
   }
 }
 .renvia-about_one .renvia-image-box .renvia-image.image_one {
@@ -3072,7 +3072,7 @@ label {
 }
 @media (max-width: 767.98px) {
   .renvia-intro_one {
-    padding: 180px 0;
+    padding: 100px 0;
   }
 }
 .renvia-intro_one:after {

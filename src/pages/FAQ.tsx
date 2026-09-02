@@ -75,7 +75,7 @@ export default function FAQ() {
                           <p>Connect with our senior industrial property consultants today.</p>
                         </div>
                       </div>
-                      <Link to="/contact" className="theme-btn style-one">
+                      <Link to="/contact#consultation-form" className="theme-btn style-one">
                         Request Advisory <i className="far fa-arrow-right" />
                       </Link>
                     </div>

@@ -932,6 +932,7 @@ export default function Home() {
   min-height:560px;
   display:block;
   object-fit:cover;
+  object-position:72% 25%;
   transition:transform .7s ease;
 }
 
@@ -1216,6 +1217,7 @@ export default function Home() {
 
   .mre-leadership-image img{
     min-height:480px;
+    object-position:72% 25%;
   }
 
   .mre-leadership-content{
@@ -1246,6 +1248,7 @@ export default function Home() {
 
   .mre-leadership-image img{
     min-height:380px;
+    object-position:72% 20%;
   }
 
   .mre-image-badge{
@@ -1297,6 +1300,7 @@ export default function Home() {
 
   .mre-leadership-image img{
     min-height:320px;
+    object-position:72% 20%;
   }
 
   .mre-leadership-content{
@@ -1311,6 +1315,21 @@ export default function Home() {
     font-size:18px;
   }
 
+}
+
+@media(max-width:767px){
+  .renvia-about_one .renvia-content-box,
+  .renvia-feature_one .renvia-content-box {
+    margin-top: 25px !important;
+  }
+
+  .renvia-features-items {
+    padding-top: 30px !important;
+  }
+
+  .section-title {
+    margin-bottom: 25px !important;
+  }
 }
 
 `}</style>

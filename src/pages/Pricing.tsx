@@ -122,7 +122,7 @@ export default function Pricing() {
                       <p>{plan.desc}</p>
                     </div>
                     <div className="pricing-button mb-40">
-                      <Link to="/contact" className="theme-btn style-one">
+                      <Link to="/contact#consultation-form" className="theme-btn style-one">
                         Engage Advisory <i className="far fa-arrow-right" />
                       </Link>
                     </div>

@@ -727,3 +727,63 @@
 
 .pb-300 {
   padding-bottom: 300px; }
+
+/*---------------------------------------
+    - Responsive Spacings for Tablet & Mobile
+-----------------------------------------*/
+
+@media (max-width: 991.98px) {
+  .pt-300, .pt-290, .pt-280, .pt-270, .pt-260, .pt-250, .pt-240, .pt-230, .pt-220, .pt-210,
+  .pt-200, .pt-190, .pt-180, .pt-170, .pt-160, .pt-150, .pt-145, .pt-140, .pt-135, .pt-130,
+  .pt-125, .pt-120, .pt-115, .pt-110, .pt-105, .pt-100 {
+    padding-top: 70px !important;
+  }
+
+  .pb-300, .pb-290, .pb-280, .pb-270, .pb-260, .pb-250, .pb-240, .pb-230, .pb-220, .pb-210,
+  .pb-200, .pb-190, .pb-180, .pb-170, .pb-160, .pb-150, .pb-145, .pb-140, .pb-135, .pb-130,
+  .pb-125, .pb-120, .pb-115, .pb-110, .pb-105, .pb-100 {
+    padding-bottom: 70px !important;
+  }
+
+  .pt-95, .pt-90, .pt-85, .pt-80, .pt-75 {
+    padding-top: 55px !important;
+  }
+
+  .pb-95, .pb-90, .pb-85, .pb-80, .pb-75 {
+    padding-bottom: 55px !important;
+  }
+
+  .mb-60, .mb-55, .mb-50, .mb-45, .mb-40 {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pt-300, .pt-290, .pt-280, .pt-270, .pt-260, .pt-250, .pt-240, .pt-230, .pt-220, .pt-210,
+  .pt-200, .pt-190, .pt-180, .pt-170, .pt-160, .pt-150, .pt-145, .pt-140, .pt-135, .pt-130,
+  .pt-125, .pt-120, .pt-115, .pt-110, .pt-105, .pt-100, .pt-95, .pt-90 {
+    padding-top: 45px !important;
+  }
+
+  .pb-300, .pb-290, .pb-280, .pb-270, .pb-260, .pb-250, .pb-240, .pb-230, .pb-220, .pb-210,
+  .pb-200, .pb-190, .pb-180, .pb-170, .pb-160, .pb-150, .pb-145, .pb-140, .pb-135, .pb-130,
+  .pb-125, .pb-120, .pb-115, .pb-110, .pb-105, .pb-100, .pb-95, .pb-90 {
+    padding-bottom: 45px !important;
+  }
+
+  .pt-85, .pt-80, .pt-75, .pt-70, .pt-65, .pt-60 {
+    padding-top: 35px !important;
+  }
+
+  .pb-85, .pb-80, .pb-75, .pb-70, .pb-65, .pb-60 {
+    padding-bottom: 35px !important;
+  }
+
+  .mb-60, .mb-55, .mb-50, .mb-45, .mb-40 {
+    margin-bottom: 22px !important;
+  }
+
+  .mt-60, .mt-55, .mt-50, .mt-45, .mt-40 {
+    margin-top: 22px !important;
+  }
+}

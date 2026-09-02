@@ -72,7 +72,7 @@ export default function Contact() {
         </section>
 
         {/* ====== Start Contact Form Section ====== */}
-        <section className="renvia-contact_three pt-80 pb-120">
+        <section id="consultation-form" className="renvia-contact_three pt-80 pb-120">
           <div className="container">
             <div className="contact-wrapper">
               <h3 className="text-center mb-4">Request a Strategic Consultation</h3>
