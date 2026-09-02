@@ -1,0 +1,632 @@
+
+/*======================
+    Project Section  CSS
+=======================*/
+
+
+.renvia-project-item{
+    &.style-one{
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+        @include respond(md){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & .project-content{
+            & .project-meta{
+                & span{
+                    color: $heading-color;
+                    margin-bottom: 10px;
+                    &:not(:last-child){
+                        margin-right: 15px;
+                    }
+                    & i{
+                        margin-right: 10px;
+                        color: $primary-color;
+                    }
+                    &.location{
+                        font-weight: 500;
+                    }
+                }
+            }
+            & .title{
+                font-size: $h3-font;
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+            & .icon-btn{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $primary-color;
+                color: $white-color;
+                & i{
+                    transform: rotate(-45deg);
+                    transition: all .3s;
+                }
+            }
+        }
+        & .project-thumbnail{
+            flex: 0 0 auto;
+            max-width: 295px;
+            margin-left: 30px;
+            @include respond(md){
+                margin-left: 0;
+                margin-top: 30px;
+                max-width: 100%;
+            }
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+    &.style-two{
+        & .project-thumbnail{
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            & .hover-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                padding: 40px;
+                background-color: rgba(28, 28, 37, 0.50);
+            }
+            & .project-content{
+                & .location{
+                    padding: 8px 12px;
+                    line-height: 1;
+                    background-color: rgba(255, 255, 255, 0.25);
+                    border-radius: 50px;
+                    backdrop-filter: blur(4px);
+                    color: $white-color;
+                    margin-bottom: 25px;
+                    & i{
+                        color: $primary-color;
+                        margin-right: 8px;
+                    }
+                }
+                & .title{
+                    font-size: 36px;
+                    color: $white-color;
+                    margin-bottom: 30px;
+                    @include respond(md){
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+                & .theme-btn{
+                    &.style-one{
+                        @include respond(md){
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-three{
+        &:hover{
+            & .project-thumbnail{
+                & .icon-btn{
+                    visibility: visible;
+                    opacity: 1;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                & .hover-content{
+                    background: linear-gradient(180deg, rgba(28, 28, 37, 0.00) 0%, #1C1C25 89.35%);
+                }
+            }
+        }
+        & .project-thumbnail{
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            & img{
+                width: 100%;
+                border-radius: 30px;
+            }
+            & .icon-btn{
+                z-index: 1;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: $white-color;
+                background-color: $primary-color;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+                & i{
+                    transform: rotate(-45deg);
+                }
+            }
+            & .hover-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .50);
+                display: flex;
+                align-items: flex-end;
+                padding: 40px 40px 30px;
+                transition: all .3s;
+            }
+            & .project-content{
+                & .title{
+                    font-size: $h4-font;
+                    color: $white-color;
+                    margin-bottom: 10px;
+                }
+                & span{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    &.style-four{
+        &:hover{
+            & .project-thumbnail{
+                & .hover-content{
+                    visibility: visible;
+                    opacity: 1;
+                    & .icon-btn{
+                        transform: translate(0);
+                    }
+                }
+            }
+        }
+        & .project-thumbnail{
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            & .location{
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                padding: 10px 20px;
+                line-height: 1;
+                border-radius: 30px;
+                font-weight: 500;
+                background-color: $white-color;
+                font-family: $body-font;
+                color: $heading-color;
+                & i{
+                    color: $primary-color;
+                    margin-right: 10px;
+                }
+            }
+            & img{
+                width: 100%;
+                border-radius: 30px;
+            }
+            & .hover-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(28, 28, 37, 0.60);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+                & .icon-btn{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white-color;
+                    background-color: $primary-color;
+                    transform: translateY(30px);
+                }
+            }
+        }
+        & .project-content{
+            & .title{
+                font-size: $h3-font;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+/* Project Slider CSS */ 
+
+.project-slider{
+    & .renvia-project-item{
+        &.style-two{
+            & .project-thumbnail{
+                & .project-content{
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s;
+                    @include respond(md){
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    & .slick-center{
+        &.renvia-project-item{
+            &.style-two{
+                & .project-thumbnail{
+                    & .project-content{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.project-slider,
+.projects-slider-two{
+    margin-left: -15px;
+    margin-right: -15px;
+    @include respond(lg){
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+        @include respond(lg){
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+}
+
+/* Project Section CSS */ 
+
+.renvia-project_one{
+    & .project-sticky-column{
+        position: sticky;
+        top: 140px;
+        align-self: flex-start;
+        height: fit-content;
+        z-index: 1;
+        @include respond(xl){
+            position: static;
+        }
+    }
+    & .renvia-content-box{
+        padding-right: 30px;
+        @include respond(xl){
+            padding-right: 0;
+            text-align: center;
+        }
+    }
+    & .renvia-proiect-list{
+        padding-left: 40px;
+        @include respond(xl){
+            padding-left: 0;
+            margin-top: 50px;
+        }
+        & .renvia-project-item{
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 30px;
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+.renvia-project_two{
+    background-color: $heading-color;
+    & .counter-wrapper{
+        & .item-border{
+            &:not(:last-child){
+                & .renvia-counter-item{
+                    border-right: 1px solid rgba(255, 255, 255, 0.50);
+                    @include respond(xl){
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.renvia-projects_three{
+    & .container-fluid{
+        padding-left: 95px;
+        padding-right: 95px;
+        @include respond(xxxl){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.projects-item-filter{
+    & .nice-select{
+        padding: 20px 25px;
+        border-radius: 50px;
+        background-color: #F7F5EF;
+        font-size: 14px;
+        color: $heading-color;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 30px;
+        &:after{
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            font-size: 18px;
+            content: '\f107';
+            font-family: 'Font Awesome 5 Pro';
+        }
+    }
+    & .theme-btn{
+        width: 100%;
+    }
+}
+
+.projects-wrapper{
+    & .row{
+        margin-right: -30px;
+        margin-left: -30px;
+        @include respond(xl){
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    .row>*{
+        padding-left: 30px;
+        padding-right: 30px;
+        @include respond(xl){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    & .renvia-project-item{
+        margin-bottom: 65px;
+    }
+}
+
+/* Project Details Wrapper */ 
+
+.project-details-wrapper{
+    & .project-thumbnail{
+        & img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    & .project-content{
+        & .project-meta-list{
+            display: flex;
+            justify-content: space-between;
+            @include respond(lg){
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            & .renvia-info-item{
+                @include respond(lg){
+                    width: 30%;
+                }
+                @include respond(md){
+                    width: 50%;
+                    & .icon{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        & .location{
+            margin-bottom: 15px;
+            & i{
+                margin-right: 10px;
+                color: $primary-color;
+            }
+        }
+        & .title{
+            font-size: $h2-font;
+            margin-bottom: 20px;
+            @include respond(md){
+                font-size: 24px;
+            }
+        }
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .content-box{
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+            padding: 30px 0;
+            & h3{
+                font-size: $h2-font;
+                margin-bottom: 20px;
+                @include respond(md){
+                    font-size: 22px;
+                }
+            }
+            & p{
+                margin-bottom: 30px;
+            }
+            & .features-amenities-list{
+                background-color: #F8F8F8;
+                padding: 40px 30px;
+                border-radius: 15px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 30px 30px;
+                @include respond(xl){
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 30px 15px;
+                }
+                @include respond(lg){
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @include respond(md){
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+        & .project-info-box{
+            border-radius: 30px;
+            background-color: #f8f8f8;
+            padding: 40px;
+            & h5{
+                font-size: 20px;
+                @include respond(md){
+                    font-size: 22px;
+                }
+                &:after{
+                    display: block;
+                    content: '';
+                    width: 140px;
+                    height: 1px;
+                    background-color: $primary-color;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                }
+            }
+            & ul{
+                & li{
+                    color: $heading-color;
+                    font-family: $heading-font;
+                    &:not(:last-child){
+                        margin-bottom: 25px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $border-color;
+                    }
+                    & span{
+                        font-weight: 400;
+                        font-family: $body-font;
+                        color: $text-color;
+                        float: right;
+                    }
+                }
+            }
+        }
+        & .property-media-box{
+            & .property-tabs{
+                & .nav-tabs{
+                    border-bottom: none;
+                    gap: 20px;
+                    justify-content: flex-end;
+                    @include respond(lg){
+                        justify-content: flex-start;
+                    }
+                }
+                & .nav-link{
+                    padding: 12px 20px;
+                    line-height: 1px;
+                    background-color: $gray-color;
+                    line-height: 1;
+                    font-size: 14px;
+                    font-weight: 700;
+                    border-radius: 30px;
+                    color: $heading-color;
+                    border: none;
+                    &.active{
+                        background-color: $primary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+            & .map-box{
+                & iframe{
+                    height: 570px;
+                    border-radius: 30px;
+                    margin-bottom: 35px;
+                }
+            }
+            & .renvia-image{
+                position: relative;
+                & img{
+                    width: 100%;
+                    border-radius: 30px;
+                }
+                & .play-button{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    & .video-popup{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $white-color;
+                        color: $primary-color;
+                        position: relative;
+                        &:before,
+                        &:after{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            content: "";
+                            border-radius: 50%;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                        }
+                        &:before{
+                            background-color: $white-color;
+                            animation: playpopup infinite ease-in 2s;
+                        }
+                        &:after{
+                            background-color: rgba(255, 255, 255);
+                            animation: playpopup infinite ease-in-out 4s;
+                        }
+                    }
+                }
+            }
+            & .video-image{
+                & .overlay-image{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, .50);
+                    & .play-button{
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
