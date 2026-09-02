@@ -932,7 +932,7 @@ export default function Home() {
   min-height:560px;
   display:block;
   object-fit:cover;
-  object-position:72% 25%;
+  object-position:100% 25%;
   transition:transform .7s ease;
 }
 
