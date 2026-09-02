@@ -14,29 +14,29 @@ export default function Services() {
 
   const servicesList = [
     {
-      title: "Industrial Factory Sale",
+      title: "Industrial Acquisition & Divestment Advisory",
       img: "/assets/images/home-one/services/service-img1.png",
-      desc: "Explore verified industrial factories for sale in Jaipur, offering excellent business and investment opportunities.",
+      desc: "Strategic advisory and rigorous due diligence for acquiring or divesting prime manufacturing facilities across Jaipur.",
     },
     {
-      title: "Factory Rent/Lease",
+      title: "Corporate Lease & Tenancy Advisory",
       img: "/assets/images/home-one/services/service-img2.png",
-      desc: "Flexible factory rental and lease options in Jaipur for businesses seeking efficient operations.",
+      desc: "Customized tenancy structuring, lease negotiation, and space optimization for scalable industrial operations.",
     },
     {
-      title: "Property Purchase",
+      title: "Industrial Asset Procurement",
       img: "/assets/images/home-one/services/service-img3.png",
-      desc: "Find suitable industrial properties in Jaipur for business expansion, operations, and long-term investment opportunities.",
+      desc: "End-to-end guidance in sourcing, evaluating, and securing high-performance industrial land and facilities.",
     },
     {
-      title: "Property Investment",
+      title: "Industrial Investment Advisory",
       img: "/assets/images/home-one/services/service-img4.png",
-      desc: "Explore promising industrial property investment opportunities in Jaipur with strong potential for long-term growth.",
+      desc: "Data-backed investment advisory, risk assessment, and capital allocation for high-yield industrial real estate in Jaipur.",
     },
     {
-      title: "Property Consultation",
+      title: "Strategic Valuation Consulting",
       img: "/assets/images/home-one/services/service-img5.png",
-      desc: "Get expert guidance on industrial properties in Jaipur for buying, selling, renting, and investment decisions.",
+      desc: "In-depth consultation on statutory zoning, property valuations, infrastructure feasibility, and expansion planning.",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Services() {
       <Header variant="one" />
 
       <main>
-        <PageHero title="Services" breadcrumb="Services" />
+        <PageHero title="Advisory Services" breadcrumb="Services" />
 
         {/* ====== Start Service Section ====== */}
         <section className="renvia-service_one gray-bg pt-120 pb-80">
@@ -86,11 +86,10 @@ export default function Services() {
               <div className="col-lg-8">
                 <div className="renvia-content-box mb-4 mb-xl-0 text-white text-center text-lg-start">
                   <h2 className="text-anm">
-                    Let’s Request a Schedule For Free Consultation
+                    Schedule a Strategic Advisory Session
                   </h2>
                   <p>
-                    Shape your future with us, building careers, developing
-                    communities.
+                    Partner with our industrial real estate consultants to unlock strategic value and operational efficiency for your enterprise.
                   </p>
                 </div>
               </div>
@@ -117,14 +116,13 @@ export default function Services() {
                 <div className="renvia-content-box mb-5 mb-xl-0">
                   <div className="section-title">
                     <span className="sub-title">
-                      Free Consultation
+                      STRATEGIC ADVISORY
                       <img src="/assets/images/line2.png" alt="line" />
                     </span>
-                    <h2 className="text-anm">Book A Free Consultation</h2>
+                    <h2 className="text-anm">Request a Strategic Consultation</h2>
                   </div>
                   <p>
-                    Speak with our experienced real estate advisors to evaluate
-                    your property or development project with complete clarity.
+                    Engage with our senior industrial property advisors to evaluate your operational requirements, asset valuations, and expansion strategies.
                   </p>
                   <div className="row">
                     <div className="col-md-6">

@@ -9,8 +9,8 @@ export default function Home() {
   const heroSlides = [
     {
       bg: "/assets/images/home-one/hero/hero-bg1.jpg",
-      title: "Industrial Properties for Sale & Rent in Jaipur",
-      desc: "Find the right factory, industrial unit, or commercial property for your business with Manghrani Real Estates. Explore verified industrial properties across Sitapura and other prime industrial locations in Jaipur.",
+      title: "Strategic Industrial Real Estate Advisory & Asset Solutions in Jaipur",
+      desc: "Delivering bespoke industrial real estate advisory, asset acquisition, corporate leasing, and transaction structuring across Sitapura and Jaipur's premier manufacturing corridors.",
     },
   ];
 
@@ -184,15 +184,15 @@ export default function Home() {
                 <div className="renvia-content-box mt-5 mt-xl-0">
                   <div className="section-title">
                     <span className="sub-title">
-                      About Us
+                      STRATEGIC INDUSTRIAL CONSULTING
                       <img src="/assets/images/line2.png" alt="line" />
                     </span>
                     <h2 className="text-anm">
-                     Your Reliable Partner for Factory & Industrial Property Solutions
+                     Strategic Advisory for High-Performance Industrial &amp; Manufacturing Assets
                     </h2>
                   </div>
                   <p>
-                    Whether you are looking to buy a factory, rent an industrial unit, sell your existing property, or invest in industrial real estate, our team provides suitable property options and market guidance to simplify the process.
+                    Manghrani Real Estates delivers institutional-grade consulting, asset acquisition due diligence, and corporate leasing solutions tailored for industrial enterprises, manufacturers, and institutional investors.
                   </p>
                   <div className="renvia-features-list">
                     <div className="row">
@@ -205,7 +205,7 @@ export default function Home() {
                             />
                           </div>
                           <div className="content">
-                            <h5>Factory Sale & Purchase</h5>
+                            <h5>Industrial Acquisition &amp; Asset Advisory</h5>
                           </div>
                         </div>
                       </div>
@@ -218,7 +218,7 @@ export default function Home() {
                             />
                           </div>
                           <div className="content">
-                            <h5>Industrial Property Rentals</h5>
+                            <h5>Corporate Leasing &amp; Tenancy Strategy</h5>
                           </div>
                         </div>
                       </div>
@@ -230,18 +230,18 @@ export default function Home() {
                         src="/assets/images/home-one/gallery/icon.png"
                         alt="icon"
                       />
-                      Specializing in factory sales, purchases, and rental services.
+                      Strategic site selection, asset valuation, and transaction structuring.
                     </li>
                     <li>
                       <img
                         src="/assets/images/home-one/gallery/icon.png"
                         alt="icon"
                       />
-                      Strong presence in Sitapura and major industrial locations of Jaipur.
+                      Authoritative presence across Sitapura and Jaipur's premier industrial corridors.
                     </li>
                   </ul>
                   <h6>
-                    We help businesses and investors find the right industrial property with reliable market guidance and local expertise.
+                    We advise leading enterprises and institutional investors with data-driven market intelligence, regulatory clarity, and trusted fiduciary representation.
                   </h6>
                   <div className="renvia-button">
                     <Link to="/about" className="theme-btn style-one">
@@ -254,9 +254,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ====== Start Services Section ====== */}
+        {/* ====== Start Service Section ====== */}
         <section
-          className="renvia-service_one gray-bg pt-115 pb-80"
+          className="renvia-service_one bg_cover pt-120 pb-80"
           style={{
             backgroundImage:
               "url('/assets/images/home-one/bg/service-bg.jpg')",
@@ -268,11 +268,11 @@ export default function Home() {
                 <div className="section-title text-center mb-55">
                   <span className="sub-title">
                     <img src="/assets/images/line1.png" alt="line" />
-                    What we Offer
+                    OUR ADVISORY PRACTICE
                     <img src="/assets/images/line2.png" alt="line" />
                   </span>
                   <h2 className="text-anm">
-                   Industrial Property Solutions for Every Business Need.
+                   Comprehensive Industrial Advisory &amp; Strategic Asset Solutions
                   </h2>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function Home() {
                       <h4>
                         <Link to="/contact">
                           
-                          Industrial Factory Sale
+                          Industrial Acquisition &amp; Divestment Advisory
                         </Link>
                       </h4>
                       <Link to="/contact" className="icon-btn">
@@ -294,7 +294,7 @@ export default function Home() {
                       </Link>
                     </div>
                     <p>
-                      Explore verified industrial factories for sale in Jaipur, offering excellent business and investment opportunities.
+                      Strategic advisory and rigorous due diligence for acquiring or divesting prime manufacturing facilities across Jaipur.
                     </p>
                     <img
                       src="/assets/images/home-one/services/service-img1.png"
@@ -310,7 +310,7 @@ export default function Home() {
                     <div className="title-wrap">
                       <h4>
                         <Link to="/contact">
-                          Factory Rent/Lease
+                          Corporate Lease &amp; Tenancy Advisory
                         </Link>
                       </h4>
                       <Link to="/contact" className="icon-btn">
@@ -318,7 +318,7 @@ export default function Home() {
                       </Link>
                     </div>
                     <p>
-                      Flexible factory rental and lease options in Jaipur for businesses seeking efficient operations.
+                      Customized tenancy structuring, lease negotiation, and space optimization for scalable industrial operations.
                     </p>
                     <img
                       src="/assets/images/home-one/services/service-img2.png"
@@ -334,7 +334,7 @@ export default function Home() {
                     <div className="title-wrap">
                       <h4>
                         <Link to="/contact">
-                         Property Purchase
+                         Industrial Asset Procurement
                         </Link>
                       </h4>
                       <Link to="/contact" className="icon-btn">
@@ -342,7 +342,7 @@ export default function Home() {
                       </Link>
                     </div>
                     <p>
-                      Find suitable industrial properties in Jaipur for business expansion, operations, and long-term investment opportunities.
+                      End-to-end guidance in sourcing, evaluating, and securing high-performance industrial land and facilities.
                     </p>
                     <img
                       src="/assets/images/home-one/services/service-img3.png"
@@ -358,7 +358,7 @@ export default function Home() {
                     <div className="title-wrap">
                       <h4>
                         <Link to="/contact">
-                           Property Investment
+                           Industrial Investment Advisory
                         </Link>
                       </h4>
                       <Link to="/contact" className="icon-btn">
@@ -366,7 +366,7 @@ export default function Home() {
                       </Link>
                     </div>
                     <p>
-                      Explore promising industrial property investment opportunities in Jaipur with strong potential for long-term business growth.
+                      Data-backed investment advisory, risk assessment, and capital allocation for high-yield industrial real estate in Jaipur.
                     </p>
                     <img
                       src="/assets/images/home-one/services/service-img4.png"
@@ -381,7 +381,7 @@ export default function Home() {
                     <div className="title-wrap">
                       <h4>
                         <Link to="/contact">
-                          Property Consultation
+                          Strategic Valuation Consulting
                         </Link>
                       </h4>
                       <Link to="/contact" className="icon-btn">
@@ -389,7 +389,7 @@ export default function Home() {
                       </Link>
                     </div>
                     <p>
-                      Get expert guidance on industrial properties in Jaipur for buying, selling, renting, and investment decisions.
+                      In-depth consultation on statutory zoning, property valuations, infrastructure feasibility, and expansion planning.
                     </p>
                     <img
                       src="/assets/images/home-one/services/service-img5.png"
@@ -402,10 +402,10 @@ export default function Home() {
                 <div className="renvia-service-card style-one mb-40">
                   <div className="content">
                     <div className="title-wrap">
-                      <h4><Link to="/contact">Industrial Factory Sale</Link></h4>
+                      <h4><Link to="/contact">Industrial Acquisition &amp; Divestment Advisory</Link></h4>
                       <Link to="/contact" className="icon-btn"><i className="far fa-arrow-right" /></Link>
                     </div>
-                    <p>Explore verified industrial factories for sale in Jaipur, offering excellent business and investment</p>
+                    <p>Strategic advisory and rigorous due diligence for acquiring or divesting prime manufacturing facilities across Jaipur.</p>
                     <img src="/assets/images/home-one/services/service-img1.png" alt="" />
                   </div>
                 </div>
@@ -414,10 +414,10 @@ export default function Home() {
                 <div className="renvia-service-card style-one mb-40">
                   <div className="content">
                     <div className="title-wrap">
-                      <h4><Link to="/contact">Factory Rent/Lease</Link></h4>
+                      <h4><Link to="/contact">Corporate Lease &amp; Tenancy Advisory</Link></h4>
                       <Link to="/contact" className="icon-btn"><i className="far fa-arrow-right" /></Link>
                     </div>
-                    <p>Flexible factory rental and lease options in Jaipur for businesses seeking efficient operations.</p>
+                    <p>Customized tenancy structuring, lease negotiation, and space optimization for scalable industrial operations.</p>
                     <img src="/assets/images/home-one/services/service-img2.png" alt="" />
                   </div>
                 </div>
@@ -426,10 +426,10 @@ export default function Home() {
                 <div className="renvia-service-card style-one mb-40">
                   <div className="content">
                     <div className="title-wrap">
-                      <h4><Link to="/contact">Property Purchase</Link></h4>
+                      <h4><Link to="/contact">Industrial Asset Procurement</Link></h4>
                       <Link to="/contact" className="icon-btn"><i className="far fa-arrow-right" /></Link>
                     </div>
-                    <p>Find suitable industrial properties in Jaipur for business expansion, operations, and long-term investment opportunities.</p>
+                    <p>End-to-end guidance in sourcing, evaluating, and securing high-performance industrial land and facilities.</p>
                     <img src="/assets/images/home-one/services/service-img3.png" alt="" />
                   </div>
                 </div>
@@ -438,10 +438,10 @@ export default function Home() {
                 <div className="renvia-service-card style-one mb-40">
                   <div className="content">
                     <div className="title-wrap">
-                      <h4><Link to="/contact">Property Investment</Link></h4>
+                      <h4><Link to="/contact">Industrial Investment Advisory</Link></h4>
                       <Link to="/contact" className="icon-btn"><i className="far fa-arrow-right" /></Link>
                     </div>
-                    <p>Explore promising industrial property investment opportunities in Jaipur with strong potential for long-term business growth.</p>
+                    <p>Data-backed investment advisory, risk assessment, and capital allocation for high-yield industrial real estate in Jaipur.</p>
                     <img src="/assets/images/home-one/services/service-img4.png" alt="" />
                   </div>
                 </div>
@@ -459,19 +459,19 @@ export default function Home() {
                 <div className="renvia-content-box">
                   <div className="section-title">
                     <span className="sub-title">
-                      Selected Project
+                      CURATED PORTFOLIO
                       <img src="/assets/images/line2.png" alt="line" />
                     </span>
                     <h2>
-                     Explore Our Latest <br /> Industrial Properties.
+                     Explore Strategic Industrial Portfolios &amp; <br /> Asset Case Studies
                     </h2>
                   </div>
                   <p>
-  We help businesses find the right factories and industrial properties across Sitapura and Jaipur’s key industrial locations.
+  Delivering bespoke advisory and structured property solutions across Sitapura and Jaipur’s most prominent industrial zones.
 </p>
                   <div className="renvia-button mt-35">
                     <Link to="/projects" className="theme-btn style-one">
-                      View All Project <i className="far fa-arrow-right" />
+                      View All Projects <i className="far fa-arrow-right" />
                     </Link>
                   </div>
                 </div>
@@ -483,19 +483,17 @@ export default function Home() {
                       <div className="project-meta">
                         <span className="location">
                           <i className="far fa-map-marker-alt" />
-                          Phoenix, AZ
+                          Sitapura Industrial Area, Jaipur
                         </span>
                         <span>
-                          <Link to="/projects">Apartment</Link>
+                          <Link to="/projects">Industrial Complex</Link>
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Luxury Apartment</Link>
+                        <Link to="/project-details">Manufacturing &amp; Logistics Facility</Link>
                       </h4>
                       <p>
-                        We stand for more than just property we represent Real
-                        estate transparency, innovation, and a client first
-                        approach.
+                        Comprehensive industrial facility evaluated for heavy manufacturing and integrated supply-chain operations.
                       </p>
                       <Link to="/project-details" className="icon-btn">
                         <i className="far fa-arrow-right" />
@@ -514,19 +512,17 @@ export default function Home() {
                       <div className="project-meta">
                         <span className="location">
                           <i className="far fa-map-marker-alt" />
-                          Huntsville, Alabama
+                          Sitapura Phase III, Jaipur
                         </span>
                         <span>
-                          <Link to="/projects">Apartment</Link>
+                          <Link to="/projects">Industrial Park</Link>
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Eden Estate</Link>
+                        <Link to="/project-details">Prime Industrial Park</Link>
                       </h4>
                       <p>
-                        We stand for more than just property we represent Real
-                        estate transparency, innovation, and a client first
-                        approach.
+                        High-capacity industrial warehouse and assembly unit structured for long-term operational tenancy.
                       </p>
                       <Link to="/project-details" className="icon-btn">
                         <i className="far fa-arrow-right" />
@@ -545,19 +541,17 @@ export default function Home() {
                       <div className="project-meta">
                         <span className="location">
                           <i className="far fa-map-marker-alt" />
-                          Hollywood, Florida
+                          Mansarovar Industrial Area, Jaipur
                         </span>
                         <span>
-                          <Link to="/projects">Apartment</Link>
+                          <Link to="/projects">Commercial Logistics</Link>
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Business Center</Link>
+                        <Link to="/project-details">Corporate Industrial Hub</Link>
                       </h4>
                       <p>
-                        We stand for more than just property we represent Real
-                        estate transparency, innovation, and a client first
-                        approach.
+                        Strategically located commercial and industrial center designed for corporate headquarters and distribution.
                       </p>
                       <Link to="/project-details" className="icon-btn">
                         <i className="far fa-arrow-right" />
@@ -576,19 +570,17 @@ export default function Home() {
                       <div className="project-meta">
                         <span className="location">
                           <i className="far fa-map-marker-alt" />
-                          New York, NY
+                          Vishwakarma Industrial Area, Jaipur
                         </span>
                         <span>
-                          <Link to="/projects">Apartment</Link>
+                          <Link to="/projects">Manufacturing Facility</Link>
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Office Building</Link>
+                        <Link to="/project-details">Engineered Production Complex</Link>
                       </h4>
                       <p>
-                        We stand for more than just property we represent Real
-                        estate transparency, innovation, and a client first
-                        approach.
+                        Verified industrial real estate asset with robust power, water, and statutory clearances in place.
                       </p>
                       <Link to="/project-details" className="icon-btn">
                         <i className="far fa-arrow-right" />
@@ -654,15 +646,15 @@ export default function Home() {
                 <div className="renvia-content-box">
                   <div className="section-title">
                     <span className="sub-title">
-                      Core Features
+                      OUR ADVISORY FRAMEWORK
                       <img src="/assets/images/line2.png" alt="line" />
                     </span>
                     <h2 className="text-anm">
-                      Your Trusted Partner in Industrial Real Estate
+                      Data-Driven Advisory Rooted in Deep Industrial Expertise
                     </h2>
                   </div>
                   <p>
-                    Manghrani Real Estates helps businesses buy, sell, rent, and invest in industrial properties across Jaipur.
+                    Manghrani Real Estates delivers institutional-grade consulting, asset evaluation, and transaction management across Jaipur's industrial landscape.
                   </p>
                   <div className="counter-wrap">
                     <div className="row">
@@ -673,7 +665,7 @@ export default function Home() {
                               <span className="counter">80</span>
                               <span className="symbol">+</span>
                             </h2>
-                            <p>offices worldwide</p>
+                            <p>industry partners</p>
                           </div>
                         </div>
                       </div>
@@ -708,8 +700,8 @@ export default function Home() {
                       </Link>
                     </div>
                     <ul className="check-list style-three">
-                      <li>Factory Sale, Purchase & Rental Solutions</li>
-                      <li>Industrial Property Investment & Consultation</li>
+                      <li>Industrial Asset Acquisition &amp; Corporate Leasing Advisory</li>
+                      <li>Strategic Investment Consulting &amp; Regulatory Feasibility</li>
                     </ul>
                   </div>
                 </div>
@@ -733,9 +725,9 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content">
-                      <h5>Industrial Factory Sale</h5>
+                      <h5>Asset Acquisition Advisory</h5>
                       <p>
-                        Verified factory properties for sale across Jaipur and major industrial locations.
+                        In-depth market valuation and strategic guidance for acquiring verified industrial facilities.
                       </p>
                     </div>
                   </div>
@@ -756,9 +748,9 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content">
-                      <h5>Factory Rent / Lease</h5>
+                      <h5>Industrial Tenancy Advisory</h5>
                       <p>
-                        Flexible industrial factory rental and lease options for businesses across Jaipur.
+                        Strategic space planning and lease negotiations tailored to manufacturing operations.
                       </p>
                     </div>
                   </div>
@@ -779,9 +771,9 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content">
-                      <h5>Industrial Property Purchase</h5>
+                      <h5>Site Selection &amp; Sourcing</h5>
                       <p>
-                       Find suitable industrial properties matching your business and operational requirements.
+                       Data-backed location analysis and asset sourcing for operational scalability.
                       </p>
                     </div>
                   </div>
@@ -802,9 +794,9 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="content">
-                      <h5>Property Investment</h5>
+                      <h5>Investment &amp; Capital Strategy</h5>
                       <p>
-                       Explore industrial real estate investment opportunities with reliable market guidance.
+                       Expert portfolio advisory focused on long-term capital appreciation and operational yield.
                       </p>
                     </div>
                   </div>
@@ -837,10 +829,10 @@ export default function Home() {
                   <div className="section-title mb-30">
                     <span className="sub-title">
                       <img src="/assets/images/line1.png" alt="line" />
-                      CLIENT TESTIMONIAL
+                      CLIENT ADVISORY TESTIMONIAL
                     </span>
                     <h2 className="text-anm">
-                      Trusted Industrial Real Estate Specialists in Jaipur
+                      Proven Advisory Impact for Industrial Enterprises in Jaipur
                     </h2>
                   </div>
                   <div className="testimonial-slider-wrap">
@@ -853,7 +845,7 @@ export default function Home() {
                           />
                         </div>
                         <p>
-                          “Manghrani Real Estates provides reliable industrial property options and market guidance for buying, selling, renting, and investing in Jaipur.”
+                          “Manghrani Real Estates delivers unmatched strategic counsel and clear market intelligence, guiding our industrial asset decisions with absolute confidence.”
                         </p>
                         <div className="author-thumb-item">
                           <div className="author-thumb">
@@ -864,7 +856,7 @@ export default function Home() {
                           </div>
                           <div className="author-info">
                             <h5>Manghrani Real Estates</h5>
-                            <span className="position">Industrial Real Estate Specialists</span>
+                            <span className="position">Industrial Real Estate &amp; Investment Advisors</span>
                           </div>
                         </div>
                       </div>
@@ -877,7 +869,7 @@ export default function Home() {
                         <span className="symbol">+</span>
                       </h2>
                     <p>
-  Industrial property solutions <br /> for businesses and investors
+  Strategic industrial advisory <br /> mandates successfully executed
 </p>
                     </div>
                   </div>
@@ -895,10 +887,10 @@ export default function Home() {
                 <div className="section-title text-center mb-45">
                   <span className="sub-title">
                     <img src="/assets/images/line1.png" alt="line" />
-                    OUR EXPERTS
+                    SENIOR ADVISORY LEADERSHIP
                     <img src="/assets/images/line2.png" alt="line" />
                   </span>
-                  <h2 className="text-anm">Worldwide executive leadership</h2>
+                  <h2 className="text-anm">Specialized Industrial Real Estate Advisory Leadership</h2>
                 </div>
               </div>
             </div>
@@ -921,7 +913,7 @@ export default function Home() {
 
         <div className="mre-image-badge">
           <span>01</span>
-          <small>Our Leadership</small>
+          <small>Senior Advisory</small>
         </div>
 
       </div>
@@ -931,25 +923,25 @@ export default function Home() {
       <div className="mre-leadership-content">
 
         <span className="mre-leadership-label">
-          MANGHRANI REAL ESTATES
+          STRATEGIC REAL ESTATE CONSULTANCY
         </span>
 
         <h3 className="mre-leadership-title">
-          Your Trusted Partner in
+          Empowering Enterprises Through
           <br />
-          <span>Industrial Real Estate</span>
+          <span>Strategic Industrial Advisory</span>
         </h3>
 
         <p className="mre-leadership-description">
-          We provide professional industrial real estate solutions for
-          businesses, manufacturers and investors looking for the right
-          property in Jaipur's leading industrial locations.
+          We deliver specialized advisory services to industrialists,
+          institutional investors, and corporate leaders seeking high-potential
+          manufacturing facilities and logistics hubs in Jaipur.
         </p>
 
         <p className="mre-leadership-description">
-          From factory sales and leasing to industrial property investment,
-          our team focuses on transparent advice, verified opportunities
-          and long-term value for every client.
+          From structured asset acquisitions to corporate lease negotiations,
+          our team focuses on transparent counsel, verified opportunities,
+          and long-term asset value for every client.
         </p>
 
 
@@ -962,8 +954,8 @@ export default function Home() {
             </div>
 
             <div>
-              <strong>Industrial</strong>
-              <span>Property Expertise</span>
+              <strong>Strategic</strong>
+              <span>Asset Consultation</span>
             </div>
           </div>
 
@@ -975,7 +967,7 @@ export default function Home() {
 
             <div>
               <strong>Trusted</strong>
-              <span>Professional Service</span>
+              <span>Fiduciary Advisory</span>
             </div>
           </div>
 
@@ -987,7 +979,7 @@ export default function Home() {
 
             <div>
               <strong>Jaipur</strong>
-              <span>Local Market Knowledge</span>
+              <span>Deep Market Intelligence</span>
             </div>
           </div>
 
@@ -1004,7 +996,7 @@ export default function Home() {
             </h4>
 
             <span>
-              Industrial Property Consultants
+              Industrial Real Estate &amp; Investment Advisors
             </span>
 
           </div>
@@ -1493,18 +1485,16 @@ export default function Home() {
               <div className="col-lg-6">
                 <div className="section-title mb-55 text-center text-lg-start">
                   <span className="sub-title">
-                    Achievements
+                    ADVISORY EXCELLENCE
                     <img src="/assets/images/line2.png" alt="line" />
                   </span>
-                  <h2 className="text-anm">Company Awards Achievements</h2>
+                  <h2 className="text-anm">Recognized Advisory Excellence &amp; Industry Milestones</h2>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="text-box float-lg-end mb-55 text-center">
                   <p>
-                    We stand for more than just property we represent Real
-                    estate transparency, innovation, and a client first approach
-                    that puts your success at the center.
+                    Delivering institutional-grade consultancy, rigorous due diligence, and strategic transaction management that champions client success.
                   </p>
                 </div>
               </div>
@@ -1513,12 +1503,11 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="renvia-award-item style-one">
                   <div className="award-title">
-                    <h3>Real Estate Superbrand</h3>
+                    <h3>Industrial Advisory Firm of the Year</h3>
                   </div>
                   <div className="award-info">
                     <p>
-                      Recognized for exceptional quality in residential and
-                      commercial development.
+                      Recognized for exceptional quality in strategic industrial advisory and asset planning.
                     </p>
                   </div>
                   <div className="award-thumb-year">
@@ -1538,12 +1527,11 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="renvia-award-item style-one">
                   <div className="award-title">
-                    <h3>Innovative Design Studio</h3>
+                    <h3>Industrial Space Strategy Leader</h3>
                   </div>
                   <div className="award-info">
                     <p>
-                      Awarded for cutting-edge architecture and eco-conscious
-                      materials.
+                      Awarded for cutting-edge facility optimization and sustainable industrial planning.
                     </p>
                   </div>
                   <div className="award-thumb-year">
@@ -1563,12 +1551,11 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="renvia-award-item style-one">
                   <div className="award-title">
-                    <h3>Best Real Estate Consultant</h3>
+                    <h3>Best Industrial Property Consultant</h3>
                   </div>
                   <div className="award-info">
                     <p>
-                      Excellence in advisory, portfolio management, and client
-                      satisfaction.
+                      Excellence in advisory, portfolio management, asset valuation, and client satisfaction.
                     </p>
                   </div>
                   <div className="award-thumb-year">
@@ -1588,12 +1575,11 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="renvia-award-item style-one">
                   <div className="award-title">
-                    <h3>Residential Adviser of the Year</h3>
+                    <h3>Commercial &amp; Industrial Advisor of the Year</h3>
                   </div>
                   <div className="award-info">
                     <p>
-                      National recognition for setting new benchmarks in urban
-                      housing.
+                      National recognition for setting new benchmarks in industrial tenancy and investment consulting.
                     </p>
                   </div>
                   <div className="award-thumb-year">
@@ -1621,11 +1607,11 @@ export default function Home() {
                 <div className="section-title text-center mb-5">
                   <span className="sub-title">
                     <img src="/assets/images/line1.png" alt="line" />
-                    Our Latest Blog
+                    INDUSTRY INSIGHTS &amp; ADVISORY
                     <img src="/assets/images/line2.png" alt="line" />
                   </span>
                   <h2 className="text-anm">
-                    Latest News Update <br /> & Articles
+                    Strategic Market Insights &amp; <br /> Industrial Intelligence
                   </h2>
                 </div>
               </div>

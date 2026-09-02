@@ -9,48 +9,48 @@ export default function Pricing() {
 
   const plans = [
     {
-      name: "Starter Plan",
-      desc: "For small developments and exploratory property consultations",
+      name: "Exploratory Advisory Plan",
+      desc: "For enterprises evaluating initial site feasibility and market valuations",
       priceMonth: 0,
       priceYear: 0,
       popular: false,
       features: [
-        { text: "Unlimited Products Updates", included: true },
-        { text: "Custom Infrastructure", included: true },
-        { text: "Custom Permission", included: true },
-        { text: "Custom Design & Review", included: true },
-        { text: "Dedicated Account Manager", included: false },
-        { text: "24/7 Priority Support", included: false },
+        { text: "Initial Asset & Site Feasibility Report", included: true },
+        { text: "RIICO & Statutory Zoning Assessment", included: true },
+        { text: "Market Rental & Valuation Guidance", included: true },
+        { text: "Verified Property Portfolio Access", included: true },
+        { text: "Dedicated Senior Industrial Advisor", included: false },
+        { text: "End-to-End Transaction Structuring", included: false },
       ],
     },
     {
-      name: "Business Plan",
-      desc: "Ideal for growing portfolios and ongoing developments",
+      name: "Growth Advisory Plan",
+      desc: "For expanding manufacturers requiring dedicated acquisition & tenancy strategy",
       priceMonth: 86,
       priceYear: 828,
       popular: true,
       features: [
-        { text: "Unlimited Products Updates", included: true },
-        { text: "Custom Infrastructure", included: true },
-        { text: "Custom Permission", included: true },
-        { text: "Custom Design & Review", included: true },
-        { text: "Dedicated Account Manager", included: true },
-        { text: "24/7 Priority Support", included: false },
+        { text: "Comprehensive Asset Feasibility & Due Diligence", included: true },
+        { text: "RIICO Statutory Approvals & Clearances", included: true },
+        { text: "Lease Negotiation & Term Structuring", included: true },
+        { text: "Verified Property Portfolio Access", included: true },
+        { text: "Dedicated Senior Industrial Advisor", included: true },
+        { text: "End-to-End Transaction Structuring", included: false },
       ],
     },
     {
-      name: "Enterprise Plan",
-      desc: "Full-scale advisory and turnkey development oversight",
+      name: "Corporate Advisory Plan",
+      desc: "Full-scale fiduciary advisory, capital allocation, and turnkey portfolio management",
       priceMonth: 95,
       priceYear: 1188,
       popular: false,
       features: [
-        { text: "Unlimited Products Updates", included: true },
-        { text: "Custom Infrastructure", included: true },
-        { text: "Custom Permission", included: true },
-        { text: "Custom Design & Review", included: true },
-        { text: "Dedicated Account Manager", included: true },
-        { text: "24/7 Priority Support", included: true },
+        { text: "Institutional Due Diligence & Valuation", included: true },
+        { text: "Comprehensive Statutory & Legal Verification", included: true },
+        { text: "Corporate Lease & Acquisition Representation", included: true },
+        { text: "Verified Property Portfolio Access", included: true },
+        { text: "Dedicated Senior Industrial Advisor", included: true },
+        { text: "End-to-End Transaction Structuring", included: true },
       ],
     },
   ];
@@ -60,7 +60,7 @@ export default function Pricing() {
       <Header variant="one" />
 
       <main>
-        <PageHero title="Pricing" breadcrumb="Pricing" />
+        <PageHero title="Advisory Engagement Plans" breadcrumb="Pricing" />
 
         {/* ====== Start Pricing Section ====== */}
         <section className="renvia-pricing-sec pt-115 pb-75">
@@ -70,10 +70,10 @@ export default function Pricing() {
                 <div className="section-title text-center mb-45">
                   <span className="sub-title">
                     <img src="/assets/images/line1.png" alt="line" />
-                    OUR Pricing
+                    CONSULTING ENGAGEMENT MODELS
                     <img src="/assets/images/line2.png" alt="line" />
                   </span>
-                  <h2 className="text-anm">Choose Your Suits Package</h2>
+                  <h2 className="text-anm">Select an Advisory Engagement Model</h2>
                 </div>
                 {/* Switch Monthly/Yearly */}
                 <div className="theme-switch-box justify-content-center mb-55 d-flex align-items-center gap-3">
@@ -82,7 +82,7 @@ export default function Pricing() {
                     style={{ cursor: "pointer" }}
                     onClick={() => setIsYearly(false)}
                   >
-                    Monthly
+                    Standard Retainer
                   </span>
                   <label className="switch" htmlFor="pricingBox">
                     <input
@@ -98,7 +98,7 @@ export default function Pricing() {
                     style={{ cursor: "pointer" }}
                     onClick={() => setIsYearly(true)}
                   >
-                    Yearly (Save 20%)
+                    Annual Advisory (Save 20%)
                   </span>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function Pricing() {
                       plan.popular ? "popular-plan" : ""
                     }`}
                   >
-                    {plan.popular && <div className="popular">Popular</div>}
+                    {plan.popular && <div className="popular">Recommended</div>}
                     <div className="pricing-header mb-35">
                       <span className="plan">{plan.name}</span>
                       <div className="price">
@@ -123,7 +123,7 @@ export default function Pricing() {
                     </div>
                     <div className="pricing-button mb-40">
                       <Link to="/contact" className="theme-btn style-one">
-                        Join This Plan <i className="far fa-arrow-right" />
+                        Engage Advisory <i className="far fa-arrow-right" />
                       </Link>
                     </div>
                     <div className="pricing-body">
@@ -158,7 +158,7 @@ export default function Pricing() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title text-center mb-30">
-                  <h3>We take great pride in working with top-tier clientele.</h3>
+                  <h3>Trusted by leading industrial enterprises and manufacturing leaders.</h3>
                 </div>
               </div>
             </div>

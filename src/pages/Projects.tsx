@@ -12,45 +12,45 @@ export default function Projects() {
   const projectsList = [
     {
       id: 1,
-      title: "Apartment Building",
-      location: "New York, NY",
+      title: "Manufacturing & Logistics Facility",
+      location: "Sitapura Industrial Area, Jaipur",
       type: "Factory",
       img: "/assets/images/innerpage/project/project-img1.png",
     },
     {
       id: 2,
-      title: "Eden Estate",
-      location: "Miami, FL",
-      type: "Factory",
+      title: "Prime Industrial Park",
+      location: "Sitapura Phase III, Jaipur",
+      type: "Sale/Rent",
       img: "/assets/images/innerpage/project/project-img2.png",
     },
     {
       id: 3,
-      title: "Vista at Council Square",
-      location: "Chicago, IL",
-      type: "Factory",
+      title: "Corporate Logistics Hub",
+      location: "Mansarovar Industrial Area, Jaipur",
+      type: "Investment",
       img: "/assets/images/innerpage/project/project-img3.png",
     },
     {
       id: 4,
-      title: "Office Building",
-      location: "San Francisco, CA",
+      title: "Engineered Production Complex",
+      location: "Vishwakarma Industrial Area (VKIA), Jaipur",
       type: "Factory",
       img: "/assets/images/innerpage/project/project-img4.png",
     },
     {
       id: 5,
-      title: "Luxury Apartment",
-      location: "Los Angeles, CA",
-      type: "apartment",
+      title: "High-Capacity Warehousing Depot",
+      location: "Sitapura Industrial Area, Jaipur",
+      type: "Sale/Rent",
       status: "ready",
       img: "/assets/images/innerpage/project/project-img5.jpg",
     },
     {
       id: 6,
-      title: "Skyline Heights",
-      location: "Austin, TX",
-      type: "apartment",
+      title: "Advanced Industrial Unit",
+      location: "Vishwakarma Industrial Area (VKIA), Jaipur",
+      type: "Investment",
       status: "ongoing",
       img: "/assets/images/innerpage/project/project-img6.jpg",
     },
@@ -68,7 +68,7 @@ export default function Projects() {
       <Header variant="one" />
 
       <main>
-        <PageHero title="Projects" breadcrumb="Projects" />
+        <PageHero title="Industrial Assets &amp; Portfolios" breadcrumb="Projects" />
 
         <section className="renvia-projects-sec pt-120 pb-120">
           <div className="container">
@@ -77,11 +77,11 @@ export default function Projects() {
   <form onSubmit={(e) => e.preventDefault()}>
     <div className="row align-items-end justify-content-center">
 
-      {/* Property Type */}
+      {/* Property Classification */}
       <div className="col-xl-4 col-md-6 mb-3 mb-xl-0">
         <div className="form-group">
           <label className="form-label text-muted small">
-            Property Type
+            Property Classification
           </label>
 
           <select
@@ -89,10 +89,10 @@ export default function Projects() {
             value={filterType}
             onChange={(e) => setFilterType(e.target.value)}
           >
-            <option value="all">All Types</option>
-            <option value="Factory">Factory</option>
-            <option value="Sale/Rent">Sale / Rent</option>
-            <option value="Investment">Investment</option>
+            <option value="all">All Classifications</option>
+            <option value="Factory">Manufacturing / Factory</option>
+            <option value="Sale/Rent">Acquisition / Lease</option>
+            <option value="Investment">Investment Advisory</option>
           </select>
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function Projects() {
       <div className="col-xl-4 col-md-6 mb-3 mb-xl-0">
         <div className="form-group">
           <label className="form-label text-muted small">
-            Location
+            Industrial Location / Hub
           </label>
 
           <select
@@ -110,10 +110,10 @@ export default function Projects() {
             onChange={(e) => setFilterLocation(e.target.value)}
           >
             <option value="all">All Locations</option>
-            <option value="sitapura">Sitapura</option>
-            <option value="mansarovar">Mansarovar</option>
-            <option value="vishwakarma">Vishwakarma Industrial Area</option>
-            <option value="jaipur">Jaipur</option>
+            <option value="sitapura">Sitapura Industrial Area</option>
+            <option value="mansarovar">Mansarovar Industrial Area</option>
+            <option value="vishwakarma">Vishwakarma Industrial Area (VKIA)</option>
+            <option value="jaipur">Jaipur Region</option>
           </select>
         </div>
       </div>
@@ -130,7 +130,7 @@ export default function Projects() {
               setFilterLocation("all");
             }}
           >
-            Reset
+            Reset Filters
           </button>
         </div>
       </div>

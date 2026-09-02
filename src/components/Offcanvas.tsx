@@ -84,14 +84,13 @@ export default function Offcanvas({
             <div className="mre-about-section">
 
               <h4 className="mre-section-title">
-                About Manghrani Real Estates
+                Manghrani Real Estates Advisory
               </h4>
 
               <p className="mre-about-text">
-                We help businesses find the right industrial
-                property for their business needs. Explore
-                verified factories, industrial units and
-                investment opportunities across Jaipur.
+                Providing institutional-grade industrial real estate advisory,
+                corporate tenancy strategy, and investment consulting
+                across Sitapura and Jaipur.
               </p>
 
             </div>
@@ -102,7 +101,7 @@ export default function Offcanvas({
             <div className="mre-property-section">
 
               <h4 className="mre-section-title">
-                Popular Properties
+                Curated Asset Portfolios
               </h4>
 
               <div className="mre-property-list">
@@ -159,7 +158,7 @@ export default function Offcanvas({
             <div className="mre-services-section">
 
               <h4 className="mre-section-title">
-                Our Services
+                Advisory Services
               </h4>
 
               <div className="mre-services-list">
@@ -170,7 +169,7 @@ export default function Offcanvas({
                   className="mre-service-item"
                 >
                   <span>
-                    Industrial Factory Sale
+                    Industrial Acquisition &amp; Divestment Advisory
                   </span>
 
                   <i className="far fa-arrow-right"></i>
@@ -182,7 +181,7 @@ export default function Offcanvas({
                   className="mre-service-item"
                 >
                   <span>
-                    Factory Rent / Lease
+                    Corporate Lease &amp; Tenancy Advisory
                   </span>
 
                   <i className="far fa-arrow-right"></i>
@@ -194,7 +193,7 @@ export default function Offcanvas({
                   className="mre-service-item"
                 >
                   <span>
-                    Industrial Property Purchase
+                    Industrial Asset Procurement
                   </span>
 
                   <i className="far fa-arrow-right"></i>
@@ -206,7 +205,7 @@ export default function Offcanvas({
                   className="mre-service-item"
                 >
                   <span>
-                    Property Investment
+                    Industrial Investment Advisory
                   </span>
 
                   <i className="far fa-arrow-right"></i>
@@ -218,7 +217,7 @@ export default function Offcanvas({
                   className="mre-service-item"
                 >
                   <span>
-                    Property Consultation
+                    Strategic Valuation Consulting
                   </span>
 
                   <i className="far fa-arrow-right"></i>

@@ -24,16 +24,14 @@ export default function Offcanvas({ isOpen, onClose }: OffcanvasProps) {
           <div className="offcanvas-body">
             {/* Panel Box */}
             <div className="panel-box mb-40">
-              <h4 className="panel-widget-title mb-10">Who Renvia Agency?</h4>
+              <h4 className="panel-widget-title mb-10">Manghrani Advisory</h4>
               <p>
-                We turn your dream vacations into unforgettable realities.
-                Whether you&apos;re seeking a relaxing beach escape or a thrilling
-                adventure.
+                Strategic industrial real estate advisory, corporate tenancy structuring, and verified asset solutions across Jaipur.
               </p>
             </div>
             {/* Panel Box */}
             <div className="panel-box mb-40">
-              <h4 className="panel-widget-title mb-20">Popular Rent</h4>
+              <h4 className="panel-widget-title mb-20">Curated Portfolios</h4>
               {/* Renvia Project Item */}
               <div className="renvia-project-item mb-20">
                 <div className="project-thumbnail">
@@ -45,11 +43,11 @@ export default function Offcanvas({ isOpen, onClose }: OffcanvasProps) {
                     <div className="project-content">
                       <span className="location">
                         <i className="far fa-map-marker-alt" />
-                        New York, NY
+                        Sitapura Industrial Area, Jaipur
                       </span>
                       <h4 className="title">
                         <Link to="/project-details" onClick={onClose}>
-                          Apartment Building
+                          Industrial Logistics Complex
                         </Link>
                       </h4>
                     </div>
@@ -67,11 +65,11 @@ export default function Offcanvas({ isOpen, onClose }: OffcanvasProps) {
                     <div className="project-content">
                       <span className="location">
                         <i className="far fa-map-marker-alt" />
-                        New York, NY
+                        VKIA, Jaipur
                       </span>
                       <h4 className="title">
                         <Link to="/project-details" onClick={onClose}>
-                          Commercial Space
+                          Manufacturing &amp; Engineering Facility
                         </Link>
                       </h4>
                     </div>
@@ -82,8 +80,8 @@ export default function Offcanvas({ isOpen, onClose }: OffcanvasProps) {
           </div>
           {/* Panel Box */}
           <div className="panel-box">
-            <h4>Newsletter</h4>
-            <p className="mb-15">Get every travel news update</p>
+            <h4>Market Intelligence</h4>
+            <p className="mb-15">Get quarterly industrial market reports</p>
             <form onSubmit={(e) => e.preventDefault()}>
               <div className="form-group">
                 <input

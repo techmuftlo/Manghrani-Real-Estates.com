@@ -24,7 +24,7 @@ export default function Contact() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title text-center mb-50">
-                  <h2>Our Contact Information</h2>
+                  <h2>Connect With Our Advisory Team</h2>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ export default function Contact() {
                     <i className="far fa-map-marker-alt" />
                   </div>
                   <div className="content">
-                    <h5>Our Address</h5>
+                    <h5>Advisory Office</h5>
                     <p>H1-381, RIICO Industrial Area, Sitapura Industrial Area, Sitapura, Jaipur, Rajasthan 303022</p>
                   </div>
                 </div>
@@ -46,11 +46,11 @@ export default function Contact() {
                     <i className="far fa-phone-alt" />
                   </div>
                   <div className="content">
-                    <h5>Contact Number</h5>
+                    <h5>Direct Advisory Line</h5>
                     <p>
-                      Mobile: <a href="tel:+919950000550">+91 99500 00550</a>
+                      Direct: <a href="tel:+919950000550">+91 99500 00550</a>
                     </p>
-                    <p>Industrial Real Estate Specialists in Jaipur</p>
+                    <p>Industrial Real Estate &amp; Investment Advisors</p>
                   </div>
                 </div>
               </div>
@@ -60,10 +60,10 @@ export default function Contact() {
                     <i className="far fa-clock" />
                   </div>
                   <div className="content">
-                    <h5>Opening Hours</h5>
-                    <p>10:00 - 07:00</p>
+                    <h5>Consultation Hours</h5>
+                    <p>10:00 - 19:00</p>
                     <p>Monday - Saturday</p>
-                    <p>Sunday: Closed</p>
+                    <p>Sunday: By Appointment</p>
                   </div>
                 </div>
               </div>
@@ -75,11 +75,10 @@ export default function Contact() {
         <section className="renvia-contact_three pt-80 pb-120">
           <div className="container">
             <div className="contact-wrapper">
-              <h3 className="text-center mb-4">Get In Touch</h3>
+              <h3 className="text-center mb-4">Request a Strategic Consultation</h3>
               {formSent && (
                 <div className="alert alert-success mb-4 text-center">
-                  Thank you! Your message has been sent successfully. We will get
-                  back to you shortly.
+                  Thank you! Your advisory inquiry has been submitted successfully. A senior consultant will contact you promptly.
                 </div>
               )}
               <form onSubmit={handleSubmit} className="contact-form">
@@ -93,7 +92,7 @@ export default function Contact() {
                       <input
                         type="text"
                         className="form_control w-100"
-                        placeholder="Your Name"
+                        placeholder="Your Name / Enterprise Name"
                         name="name"
                         required
                       />
@@ -108,7 +107,7 @@ export default function Contact() {
                       <input
                         type="email"
                         className="form_control w-100"
-                        placeholder="Email Address"
+                        placeholder="Corporate Email Address"
                         name="email"
                         required
                       />
@@ -138,7 +137,7 @@ export default function Contact() {
                       <input
                         type="text"
                         className="form_control w-100"
-                        placeholder="Subject"
+                        placeholder="Advisory Requirement (e.g. Sitapura Acquisition, Lease)"
                         name="subject"
                         required
                       />
@@ -152,7 +151,7 @@ export default function Contact() {
                       </label>
                       <textarea
                         className="form_control w-100"
-                        placeholder="Your Message"
+                        placeholder="Describe your operational requirements, preferred area, or asset parameters..."
                         name="message"
                         rows={5}
                         required
@@ -162,7 +161,7 @@ export default function Contact() {
                   <div className="col-lg-12">
                     <div className="form-group text-center">
                       <button type="submit" className="theme-btn style-one">
-                        Send Message Us <i className="far fa-arrow-right" />
+                        Submit Advisory Request <i className="far fa-arrow-right" />
                       </button>
                     </div>
                   </div>

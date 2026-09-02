@@ -34,17 +34,16 @@ export default function Footer({
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <div className="section-title text-white mb-55 text-center text-lg-start">
-                  <h2>Find Your Industrial Property in Jaipur</h2>
+                  <h2>Strategic Industrial Real Estate Advisory in Jaipur</h2>
                   <p>
-                    Let us help you find the right factory, industrial unit, or
-                    commercial property for your business.
+                    Partner with our industrial real estate specialists for site acquisition, corporate leasing, and strategic asset advisory across Rajasthan.
                   </p>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="renvia-button text-lg-end mb-60 text-center">
                   <Link to="/contact" className="theme-btn style-one">
-                    Get In Touch <i className="far fa-arrow-right" />
+                    Request Consultation <i className="far fa-arrow-right" />
                   </Link>
                 </div>
               </div>
@@ -74,9 +73,7 @@ export default function Footer({
                     </Link>
                   </div>
                   <p>
-                    Manghrani Real Estates is an industrial real estate
-                    specialist helping businesses buy, sell, rent, and invest
-                    in properties across Jaipur.
+                    Manghrani Real Estates is a premier industrial real estate consultancy delivering strategic advisory, corporate leasing, and transaction structuring across Jaipur.
                   </p>
                   <div className="social-box">
                     <a
@@ -127,27 +124,27 @@ export default function Footer({
                       <Link to="/about">About Us</Link>
                     </li>
                     <li>
-                      <Link to="/services">Our Services</Link>
+                      <Link to="/services">Advisory Services</Link>
                     </li>
                     <li>
-                      <Link to="/about">About Us</Link>
+                      <Link to="/projects">Curated Portfolios</Link>
                     </li>
                     <li>
-                      <Link to="/projects">Properties</Link>
+                      <Link to="/pricing">Engagement Plans</Link>
                     </li>
                     <li>
-                      <Link to="/contact">Contact</Link>
+                      <Link to="/contact">Contact Advisory</Link>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Our Services */}
+            {/* Our Advisory Practice */}
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget footer-nav-widget mb-40">
                 <div className="widget-content">
-                  <h4 className="widget-title">Our Services</h4>
+                  <h4 className="widget-title">Advisory Practice</h4>
                   <div className="line-wrap">
                     <span />
                     <span />
@@ -155,19 +152,19 @@ export default function Footer({
                   </div>
                   <ul className="widget-nav">
                     <li>
-                      <Link to="/services">Industrial Factory Sale</Link>
+                      <Link to="/services">Industrial Acquisition Advisory</Link>
                     </li>
                     <li>
-                      <Link to="/services">Factory Rent/Lease</Link>
+                      <Link to="/services">Corporate Tenancy Strategy</Link>
                     </li>
                     <li>
-                      <Link to="/services">Industrial Property Purchase</Link>
+                      <Link to="/services">Asset Procurement Consulting</Link>
                     </li>
                     <li>
-                      <Link to="/services">Property Investment</Link>
+                      <Link to="/services">Industrial Investment Advisory</Link>
                     </li>
                     <li>
-                      <Link to="/services">Property Consultation</Link>
+                      <Link to="/services">Strategic Valuation Consulting</Link>
                     </li>
                   </ul>
                 </div>
@@ -178,15 +175,14 @@ export default function Footer({
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget footer-newsletter-widget mb-40">
                 <div className="widget-content">
-                  <h4 className="widget-title">Newsletter</h4>
+                  <h4 className="widget-title">Market Intelligence</h4>
                   <div className="line-wrap">
                     <span />
                     <span />
                     <span />
                   </div>
                   <p>
-                    Industrial Real Estate Specialists in Jaipur. Contact us
-                    for verified factory and property options.
+                    Subscribe for quarterly industrial market insights, RIICO policy briefings, and valuation reports.
                   </p>
                   <form onSubmit={(e) => e.preventDefault()}>
                     <div className="form-group">

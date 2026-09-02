@@ -19,7 +19,7 @@ export default function ProjectDetails() {
       <Header variant="one" />
 
       <main>
-        <PageHero title="Project Details" breadcrumb="Project Details" />
+        <PageHero title="Asset Advisory Details" breadcrumb="Project Details" />
 
         {/* ====== Start Project Details Section ====== */}
         <section className="renvia-project-details-sec pt-120">
@@ -58,7 +58,7 @@ export default function ProjectDetails() {
                           </div>
                           <div className="info">
                             <span>Project Type</span>
-                            <h6>Commercial</h6>
+                            <h6>Industrial Complex</h6>
                           </div>
                         </div>
                         <div className="renvia-info-item style-three mb-30">
@@ -81,8 +81,8 @@ export default function ProjectDetails() {
                             />
                           </div>
                           <div className="info">
-                            <span>Flat Size</span>
-                            <h6>100 - 180 Sqft</h6>
+                            <span>Unit Size</span>
+                            <h6>10,000 - 50,000 Sqft</h6>
                           </div>
                         </div>
                         <div className="renvia-info-item style-three mb-30">
@@ -93,41 +93,31 @@ export default function ProjectDetails() {
                             />
                           </div>
                           <div className="info">
-                            <span>Price Range</span>
-                            <h6>$28K - $98K</h6>
+                            <span>Advisory Scope</span>
+                            <h6>Acquisition &amp; Lease</h6>
                           </div>
                         </div>
                       </div>
 
                       <div className="location">
-                        <i className="far fa-map-marker-alt" /> New York, NY
+                        <i className="far fa-map-marker-alt" /> Sitapura Industrial Area, Jaipur
                       </div>
-                      <h3 className="title">Apartment Building & Modern Lofts</h3>
+                      <h3 className="title">Industrial Logistics &amp; Manufacturing Facility</h3>
                       <p>
-                        Our flagship urban development integrates luxury living
-                        with unmatched proximity to key financial and commercial
-                        hubs. Engineered for sustainability and maximum comfort,
-                        the project features state-of-the-art climate control,
-                        soundproofing, and panoramic skyline vistas.
+                        Comprehensive industrial facility evaluated for heavy manufacturing, warehousing, and corporate operations. Strategically situated within Sitapura Industrial Area with high connectivity to transport corridors.
                       </p>
                       <p>
-                        Residents enjoy concierge services, private fitness
-                        studios, subterranean automated parking, and direct
-                        rooftop garden access.
+                        Benefits from verified RIICO zoning clearances, robust high-tension power connectivity, dedicated freight access, and wide industrial road frontages.
                       </p>
 
                       <div className="content-box">
                         <div className="row">
                           <div className="col-xl-8">
-                            <h3>Project Description</h3>
+                            <h3>Asset Advisory Overview</h3>
                             <p>
-                              Designed with enduring architectural balance, this
-                              property sets a new standard for cosmopolitan
-                              living. Every material, from the Italian stone
-                              facades to the floor-to-ceiling Low-E glass, was
-                              selected to guarantee beauty and energy efficiency.
+                              Evaluated with institutional due diligence, this property offers premier infrastructure for manufacturing enterprises, pharmaceutical hubs, and logistics aggregators.
                             </p>
-                            <h3>Features & amenities</h3>
+                            <h3>Features &amp; Infrastructure</h3>
                             <div className="features-amenities-list mb-5 mb-xl-0">
                               <div className="renvia-info-item style-four">
                                 <div className="icon">
@@ -138,7 +128,7 @@ export default function ProjectDetails() {
                                 </div>
                                 <div className="info">
                                   <h6>ID NO.</h6>
-                                  <p>#1253</p>
+                                  <p>#IND-1253</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -150,7 +140,7 @@ export default function ProjectDetails() {
                                 </div>
                                 <div className="info">
                                   <h6>Type</h6>
-                                  <p>Apartment</p>
+                                  <p>Industrial Facility</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -161,8 +151,8 @@ export default function ProjectDetails() {
                                   />
                                 </div>
                                 <div className="info">
-                                  <h6>Bedroom</h6>
-                                  <p>4</p>
+                                  <h6>Bays</h6>
+                                  <p>4 High-Bay Units</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -173,8 +163,8 @@ export default function ProjectDetails() {
                                   />
                                 </div>
                                 <div className="info">
-                                  <h6>Bath</h6>
-                                  <p>3</p>
+                                  <h6>Dock Levelers</h6>
+                                  <p>6 Dedicated</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -185,8 +175,8 @@ export default function ProjectDetails() {
                                   />
                                 </div>
                                 <div className="info">
-                                  <h6>Sqft</h6>
-                                  <p>1950</p>
+                                  <h6>Plot Area</h6>
+                                  <p>25,000 Sqft</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -198,7 +188,7 @@ export default function ProjectDetails() {
                                 </div>
                                 <div className="info">
                                   <h6>Purpose</h6>
-                                  <p>For Sale</p>
+                                  <p>Acquisition / Lease Advisory</p>
                                 </div>
                               </div>
                               <div className="renvia-info-item style-four">
@@ -435,13 +425,13 @@ export default function ProjectDetails() {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="section-title text-center mb-30">
-                    <h3>Contact Information & Inquiries</h3>
+                    <h3>Request Advisory Details &amp; Consultation</h3>
                   </div>
                 </div>
               </div>
               {formSent && (
                 <div className="alert alert-success mb-4 text-center">
-                  Thank you! Your request regarding this project has been sent.
+                  Thank you! Your advisory inquiry regarding this asset has been received. Our senior advisor will reach out shortly.
                 </div>
               )}
               <form onSubmit={handleSubmit}>

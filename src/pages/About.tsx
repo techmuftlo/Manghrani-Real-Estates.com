@@ -54,11 +54,11 @@ export default function About() {
                 <div className="renvia-content-box mb-5 mb-xl-0">
                   <div className="section-title mb-45">
                     <span className="sub-title">
-                      INDUSTRIAL REAL ESTATE SPECIALISTS
+                      STRATEGIC INDUSTRIAL CONSULTING &amp; ADVISORY
                       <img src="/assets/images/line2.png" alt="line" />
                     </span>
                     <h2 className="text-anm">
-                      Industrial Properties for Sale & Rent in Jaipur
+                      Strategic Industrial Real Estate Advisory &amp; Asset Solutions in Jaipur
                     </h2>
                   </div>
                   <div className="features-box-wrap">
@@ -78,10 +78,10 @@ export default function About() {
                                 alt="icon"
                               />
                             </span>
-                           Industrial Expertise 
+                           Strategic Advisory &amp; Sourcing
                           </h6>
                           <p>
-                            Finding the right factory or warehouse tailored strictly to your operational requirements.
+                            Providing tailored feasibility analysis and space planning to match your exact manufacturing roadmap.
                           </p>
                         </div>
                       </div>
@@ -94,10 +94,10 @@ export default function About() {
                                 alt="icon"
                               />
                             </span>
-                            Verified Properties
+                            Due Diligence &amp; Asset Verification
                           </h6>
                           <p>
-                            Direct deal options across prime industrial locations like Sitapura Industrial Area, Jaipur.
+                            Comprehensive title clearance, regulatory verification, and direct advisory across Sitapura and key hubs.
                           </p>
                         </div>
                       </div>
@@ -107,12 +107,12 @@ export default function About() {
                     <div className="about-trust-stat">
                       <span className="icon"><i className="fas fa-shield-check" /></span>
                       <strong>100% <span>Verified</span></strong>
-                      <small>Industrial Properties</small>
+                      <small>Regulatory Due Diligence</small>
                     </div>
                     <div className="about-trust-stat">
                       <span className="icon"><i className="fas fa-industry" /></span>
                       <strong>5+ <span>Prime Hubs</span></strong>
-                      <small>Sitapura &amp; More</small>
+                      <small>Sitapura &amp; Key Clusters</small>
                     </div>
                   </div>
                   <div className="renvia-button-wrap mt-40">
@@ -124,7 +124,7 @@ export default function About() {
                         />
                       </div>
                       <div className="content">
-                        <h5 className="title">Call Us For Any Inquiry</h5>
+                        <h5 className="title">Consult With Our Advisory Team</h5>
                         <h6>
                           <a href="tel:+91-99500-00550">+91 99500 00550</a>
                         </h6>
@@ -144,7 +144,7 @@ export default function About() {
                     We bring decades of industrial real estate expertise, strategic advisory, and verified property solutions. As Jaipur's trusted specialists, we deliver tailored spaces that align with your manufacturing and business long-term vision.
                   </p>
                   <p>
-                    From Sitapura Industrial Area to major manufacturing hubs across Jaipur, we help businesses find, buy, or rent industrial units, factories, and commercial land efficiently.
+                    From Sitapura Industrial Area to key regional clusters, we advise enterprises on site acquisition, lease structuring, and asset optimization with complete transparency.
                   </p>
                   <div className="renvia-image mt-55">
                     <img
@@ -176,7 +176,7 @@ export default function About() {
                         <span className="counter"><CounterValue target={50} /></span>
                         <span className="symbol">+</span>
                       </h2>
-                      <p>Industrial Properties Sold</p>
+                      <p>Industrial Mandates Advised</p>
                     </div>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function About() {
                         <span className="counter"><CounterValue target={30} /></span>
                         <span className="symbol">+</span>
                       </h2>
-                      <p>Active Rental Units</p>
+                      <p>Lease Portfolios Managed</p>
                     </div>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function About() {
                         <span className="counter">₹<CounterValue target={150} /></span>Cr
                         <span className="symbol">+</span>
                       </h2>
-                      <p>Property Transactions</p>
+                      <p>Capital Advisory Volume</p>
                     </div>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function About() {
                         <span className="counter"><CounterValue target={10} /></span>Lakh
                         <span className="symbol">+</span>
                       </h2>
-                      <p>Sq. Ft. Handled</p>
+                      <p>Industrial Area Consulted</p>
                     </div>
                   </div>
                 </div>
@@ -226,11 +226,11 @@ export default function About() {
                 <div className="row justify-content-center">
                   <div className="col-xl-6 col-lg-8">
                     <div className="content mb-5 mb-xl-0">
-                      <span className="sub-text">INDUSTRIAL SOLUTIONS</span>
+                      <span className="sub-text">STRATEGIC ASSET ADVISORY</span>
                       <div className="step">01</div>
-                      <h3 className="title">Industrial Factory Sale & Rent in Jaipur</h3>
+                      <h3 className="title">Industrial Asset Acquisition &amp; Tenancy Advisory</h3>
                       <p>
-                        Explore verified industrial properties, manufacturing units, and warehouses across prime locations like Sitapura Industrial Area. We provide end-to-end guidance for buying, renting, or investing in commercial real estate.
+                        In-depth portfolio evaluation, due diligence, and strategic advisory for acquiring or leasing manufacturing facilities and logistics hubs across Sitapura and Jaipur.
                       </p>
                     </div>
                   </div>
@@ -249,11 +249,11 @@ export default function About() {
                 <div className="row justify-content-center">
                   <div className="col-xl-6 col-lg-8">
                     <div className="content mb-5 mb-xl-0">
-                      <span className="sub-text">INDUSTRIAL SPECIALISTS</span>
+                      <span className="sub-text">FEASIBILITY &amp; VALUATION</span>
                       <div className="step">02</div>
-                      <h3 className="title">Industrial Property Consultation</h3>
+                      <h3 className="title">Industrial Property Valuation &amp; Feasibility Advisory</h3>
                       <p>
-                       Whether you are looking to buy a factory, rent an industrial unit, sell your existing property, or invest in industrial real estate, Manghrani Real Estates provides property options and market guidance to make the process easier.
+                       Expert guidance on market valuations, statutory zoning, infrastructure feasibility, and long-term capital allocation to empower informed decision-making.
                       </p>
                     </div>
                   </div>
@@ -272,11 +272,11 @@ export default function About() {
                 <div className="row justify-content-center">
                   <div className="col-xl-6 col-lg-8">
                     <div className="content mb-5 mb-xl-0">
-                      <span className="sub-text">INDUSTRIAL SPECIALISTS</span>
+                      <span className="sub-text">TRANSACTION STRUCTURING</span>
                       <div className="step">03</div>
-                      <h3 className="title">Industrial Property Sale & Rent</h3>
+                      <h3 className="title">Strategic Transaction Management &amp; Structuring</h3>
                       <p>
-                        Find the right factory, industrial unit, or commercial property for your business with Manghrani Real Estates. Explore verified industrial properties across Sitapura and other prime industrial locations in Jaipur.
+                        Full-cycle representation, lease negotiation, and transaction structuring designed to maximize operational efficiency and asset value across Jaipur's premier hubs.
                       </p>
                     </div>
                   </div>
@@ -317,32 +317,32 @@ export default function About() {
                   <div className="section-title">
                     <span className="sub-title">
                       <img src="/assets/images/line1.png" alt="line" />
-                      INDUSTRIAL REAL ESTATE SPECIALISTS.
+                      STRATEGIC INDUSTRIAL REAL ESTATE ADVISORS
                     </span>
-                    <h2>Industrial Properties & Manufacturing Hubs in Jaipur</h2>
+                    <h2>Empowering Industrial Growth Across Jaipur's Premier Hubs</h2>
                   </div>
                   <p>
-                    Manghrani Real Estates is an industrial real estate company specializing in the sale, purchase, and rental of factories and industrial properties. With a strong presence in Sitapura Industrial Area and major locations, we help businesses find suitable properties based on their operational and investment requirements.
+                    Manghrani Real Estates is a premier industrial real estate consultancy specializing in strategic asset advisory, corporate leasing, and transaction structuring. With authoritative market knowledge across Sitapura and Jaipur, we align industrial properties with your organizational growth objectives.
                   </p>
                   <div className="check-counter-wrap">
                     <ul className="check-list style-three">
-                      <li>Industrial Property Expertise across Sitapura & Jaipur</li>
-                      <li>Multiple Verified Factory Options for Sale & Rent</li>
-                      <li>Reliable Guidance for Property Purchase & Investment</li>
+                      <li>Authoritative Advisory across Sitapura &amp; Jaipur's Industrial Clusters</li>
+                      <li>Institutional-Grade Due Diligence &amp; Verified Asset Options</li>
+                      <li>Strategic Counsel for Asset Acquisition &amp; Capital Investment</li>
                     </ul>
                     <div className="counter-wrap">
                       <div className="renvia-counter-item">
                         <div className="content">
                           <span className="stat-icon"><i className="fas fa-shield-check" /></span>
                           <h4>100% / Verified</h4>
-                          <p>(Industrial Properties)</p>
+                          <p>(Due Diligence &amp; Compliance)</p>
                         </div>
                       </div>
                       <div className="renvia-counter-item">
                         <div className="content">
                           <span className="stat-icon"><i className="fas fa-industry" /></span>
                           <h4>5+ / Prime Hubs</h4>
-                          <p>(Sitapura & More)</p>
+                          <p>(Sitapura &amp; Key Clusters)</p>
                         </div>
                       </div>
                     </div>
