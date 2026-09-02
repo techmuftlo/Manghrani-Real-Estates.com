@@ -753,8 +753,11 @@ export default function Home() {
         <div className="mre-image-overlay"></div>
 
         <div className="mre-image-badge">
-          <span>01</span>
-          <small>Senior Advisory</small>
+          
+
+          <small>Founder </small>
+          <small>Rahul Manghrani </small>
+
         </div>
 
       </div>
@@ -1338,126 +1341,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ====== Start Award Section ====== */}
-        <section className="renvia-awards_one pt-115 pb-80">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <div className="section-title mb-55 text-center text-lg-start">
-                  <span className="sub-title">
-                    ADVISORY EXCELLENCE
-                    <img src="/assets/images/line2.png" alt="line" />
-                  </span>
-                  <h2 className="text-anm">Recognized Advisory Excellence &amp; Industry Milestones</h2>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="text-box float-lg-end mb-55 text-center">
-                  <p>
-                    Delivering institutional-grade consultancy, rigorous due diligence, and strategic transaction management that champions client success.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="renvia-award-item style-one">
-                  <div className="award-title">
-                    <h3>Industrial Advisory Firm of the Year</h3>
-                  </div>
-                  <div className="award-info">
-                    <p>
-                      Recognized for exceptional quality in strategic industrial advisory and asset planning.
-                    </p>
-                  </div>
-                  <div className="award-thumb-year">
-                    <div className="award-thumb">
-                      <img
-                        src="/assets/images/home-one/gallery/award-img1.png"
-                        alt="award"
-                      />
-                    </div>
-                    <div className="award-year">
-                      <h3>2022</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-12">
-                <div className="renvia-award-item style-one">
-                  <div className="award-title">
-                    <h3>Industrial Space Strategy Leader</h3>
-                  </div>
-                  <div className="award-info">
-                    <p>
-                      Awarded for cutting-edge facility optimization and sustainable industrial planning.
-                    </p>
-                  </div>
-                  <div className="award-thumb-year">
-                    <div className="award-thumb">
-                      <img
-                        src="/assets/images/home-one/gallery/award-img2.png"
-                        alt="award"
-                      />
-                    </div>
-                    <div className="award-year">
-                      <h3>2023</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-12">
-                <div className="renvia-award-item style-one">
-                  <div className="award-title">
-                    <h3>Best Industrial Property Consultant</h3>
-                  </div>
-                  <div className="award-info">
-                    <p>
-                      Excellence in advisory, portfolio management, asset valuation, and client satisfaction.
-                    </p>
-                  </div>
-                  <div className="award-thumb-year">
-                    <div className="award-thumb">
-                      <img
-                        src="/assets/images/home-one/gallery/award-img3.png"
-                        alt="award"
-                      />
-                    </div>
-                    <div className="award-year">
-                      <h3>2024</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-12">
-                <div className="renvia-award-item style-one">
-                  <div className="award-title">
-                    <h3>Commercial &amp; Industrial Advisor of the Year</h3>
-                  </div>
-                  <div className="award-info">
-                    <p>
-                      National recognition for setting new benchmarks in industrial tenancy and investment consulting.
-                    </p>
-                  </div>
-                  <div className="award-thumb-year">
-                    <div className="award-thumb">
-                      <img
-                        src="/assets/images/home-one/gallery/award-img4.png"
-                        alt="award"
-                      />
-                    </div>
-                    <div className="award-year">
-                      <h3>2025</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* ====== Start Blog Section ====== */}
         <section className="renvia-blog-sec pt-115 pb-80">

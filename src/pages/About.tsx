@@ -350,49 +350,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-
-            {/* Clients Logos */}
-            <div className="clients-wrapper pt-120">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img1.png"
-                    alt="client"
-                  />
-                </div>
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img2.png"
-                    alt="client"
-                  />
-                </div>
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img3.png"
-                    alt="client"
-                  />
-                </div>
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img4.png"
-                    alt="client"
-                  />
-                </div>
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img5.png"
-                    alt="client"
-                  />
-                </div>
-                <div className="col-6 col-md-4 col-lg-2 mb-30 text-center">
-                  <img
-                    src="/assets/images/innerpage/clients/client-img6.png"
-                    alt="client"
-                  />
-                </div>
-              </div>
             </div>
-          </div>
+
+         
+              
+          
+          
         </section>
       </main>
 

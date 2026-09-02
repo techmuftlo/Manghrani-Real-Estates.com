@@ -129,9 +129,7 @@ export default function Footer({
                     <li>
                       <Link to="/projects">Curated Portfolios</Link>
                     </li>
-                    <li>
-                      <Link to="/pricing">Engagement Plans</Link>
-                    </li>
+                    
                     <li>
                       <Link to="/contact">Contact Advisory</Link>
                     </li>
@@ -154,18 +152,7 @@ export default function Footer({
                     <li>
                       <Link to="/services">Industrial Acquisition Advisory</Link>
                     </li>
-                    <li>
-                      <Link to="/services">Corporate Tenancy Strategy</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Asset Procurement Consulting</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Industrial Investment Advisory</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Strategic Valuation Consulting</Link>
-                    </li>
+                  
                   </ul>
                 </div>
               </div>

@@ -8,7 +8,7 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 // import ServiceDetails from "../pages/ServiceDetails";
 import Projects from "../pages/Projects";
-import ProjectDetails from "../pages/ProjectDetails";
+// import ProjectDetails from "../pages/ProjectDetails";
 // import Team from "../pages/Team";
 // import TeamDetails from "../pages/TeamDetails";
 import Pricing from "../pages/Pricing";
@@ -41,8 +41,8 @@ export default function AppRoutes() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects.html" element={<Projects />} />
 
-        <Route path="/project-details" element={<ProjectDetails />} />
-        <Route path="/project-details.html" element={<ProjectDetails />} />
+        {/* <Route path="/project-details" element={<ProjectDetails />} />
+        <Route path="/project-details.html" element={<ProjectDetails />} /> */}
 
         {/* <Route path="/team" element={<Team />} />
         <Route path="/team.html" element={<Team />} />

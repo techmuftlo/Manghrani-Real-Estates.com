@@ -38,22 +38,8 @@ export default function Projects() {
       type: "Factory",
       img: "/assets/images/innerpage/project/project-img4.png",
     },
-    {
-      id: 5,
-      title: "High-Capacity Warehousing Depot",
-      location: "Sitapura Industrial Area, Jaipur",
-      type: "Sale/Rent",
-      status: "ready",
-      img: "/assets/images/innerpage/project/project-img5.jpg",
-    },
-    {
-      id: 6,
-      title: "Advanced Industrial Unit",
-      location: "Vishwakarma Industrial Area (VKIA), Jaipur",
-      type: "Investment",
-      status: "ongoing",
-      img: "/assets/images/innerpage/project/project-img6.jpg",
-    },
+    
+    
   ];
 
   const filteredProjects = projectsList.filter((p) => {
@@ -152,7 +138,7 @@ export default function Projects() {
                         </div>
                         <div className="hover-content">
                           <Link
-                            to="/project-details"
+                            to="/contact"
                             className="icon-btn"
                           >
                             <i className="far fa-arrow-right" />
@@ -161,7 +147,7 @@ export default function Projects() {
                       </div>
                       <div className="project-content">
                         <h3 className="title">
-                          <Link to="/project-details">{proj.title}</Link>
+                          <Link to="/contact">{proj.title}</Link>
                         </h3>
                       </div>
                     </div>
