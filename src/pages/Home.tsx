@@ -22,47 +22,6 @@ export default function Home() {
         {/* ====== Start Hero Section ====== */}
         <section className="renvia-hero_one">
           <div className="hero-dots" />
-          <div className="renvia-avatar-box">
-           
-            <div className="avatar-list">
-              <ul>
-                <li>
-                  <img
-                    src="/assets/images/home-one/gallery/avatar-img1.png"
-                    alt="avatar img"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/assets/images/home-one/gallery/avatar-img2.png"
-                    alt="avatar img"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/assets/images/home-one/gallery/avatar-img3.png"
-                    alt="avatar img"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/assets/images/home-one/gallery/avatar-img4.png"
-                    alt="avatar img"
-                  />
-                </li>
-              </ul>
-              <div className="text">
-                <div className="ratings">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
-                <p>450+ reviews</p>
-              </div>
-            </div>
-          </div>
 
           <div className="hero-slider">
             <div className="single-slider">
@@ -132,51 +91,6 @@ export default function Home() {
                       src="/assets/images/home-one/about/circle-img.png"
                       alt="about image"
                     />
-                  </div>
-                  <div className="renvia-ratings-box">
-                    <div className="content">
-                      <h2>4.9</h2>
-                      <div className="renvia-avatar-box">
-                        <div className="avatar-list">
-                          <ul>
-                            <li>
-                              <img
-                                src="/assets/images/home-one/gallery/avatar-img1.png"
-                                alt="avatar image"
-                              />
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/home-one/gallery/avatar-img2.png"
-                                alt="avatar image"
-                              />
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/home-one/gallery/avatar-img3.png"
-                                alt="avatar image"
-                              />
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/home-one/gallery/avatar-img4.png"
-                                alt="avatar image"
-                              />
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="text">
-                        <div className="ratings">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                        </div>
-                        <h6>2k+ satisfied customers</h6>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -798,79 +712,6 @@ export default function Home() {
                       <p>
                        Expert portfolio advisory focused on long-term capital appreciation and operational yield.
                       </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ====== Start Testimonial Section ====== */}
-        <section className="renvia-testimonial_one">
-          <div className="container-fluid">
-            <div className="row justify-content-center">
-              <div className="col-xl-6 col-lg-10">
-                <div className="renvia-image mb-5 mb-xl-0">
-                  <img
-                    src="/assets/images/home-one/testimonial/testimonial-img1.png"
-                    alt="testimonial"
-                  />
-                </div>
-              </div>
-              <div className="col-xl-6 col-lg-10">
-                <div
-                  className="renvia-content-box bg_cover"
-                  style={{
-                    backgroundImage:
-                      "url('/assets/images/home-one/testimonial/testimonial-bg.jpg')",
-                  }}
-                >
-                  <div className="section-title mb-30">
-                    <span className="sub-title">
-                      <img src="/assets/images/line1.png" alt="line" />
-                      CLIENT ADVISORY TESTIMONIAL
-                    </span>
-                    <h2 className="text-anm">
-                      Proven Advisory Impact for Industrial Enterprises in Jaipur
-                    </h2>
-                  </div>
-                  <div className="testimonial-slider-wrap">
-                    <div className="renvia-testimonial-item style-one mb-30">
-                      <div className="testimonial-content">
-                        <div className="quote">
-                          <img
-                            src="/assets/images/home-one/testimonial/quote.png"
-                            alt="quote"
-                          />
-                        </div>
-                        <p>
-                          “Manghrani Real Estates delivers unmatched strategic counsel and clear market intelligence, guiding our industrial asset decisions with absolute confidence.”
-                        </p>
-                        <div className="author-thumb-item">
-                          <div className="author-thumb">
-                            <img
-                              src="/assets/images/home-one/testimonial/author-img1.png"
-                              alt="author image"
-                            />
-                          </div>
-                          <div className="author-info">
-                            <h5>Manghrani Real Estates</h5>
-                            <span className="position">Industrial Real Estate &amp; Investment Advisors</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="renvia-counter-box">
-                    <div className="content">
-                      <h2>
-                        <span className="number">560</span>
-                        <span className="symbol">+</span>
-                      </h2>
-                    <p>
-  Strategic industrial advisory <br /> mandates successfully executed
-</p>
                     </div>
                   </div>
                 </div>
