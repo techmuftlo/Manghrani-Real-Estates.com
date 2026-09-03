@@ -404,12 +404,12 @@ export default function Home() {
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Manufacturing &amp; Logistics Facility</Link>
+                        <Link to="/projects">Manufacturing &amp; Logistics Facility</Link>
                       </h4>
                       <p>
                         Comprehensive industrial facility evaluated for heavy manufacturing and integrated supply-chain operations.
                       </p>
-                      <Link to="/project-details" className="icon-btn">
+                      <Link to="/projects" className="icon-btn">
                         <i className="far fa-arrow-right" />
                       </Link>
                     </div>
@@ -433,12 +433,12 @@ export default function Home() {
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Prime Industrial Park</Link>
+                        <Link to="/projects">Prime Industrial Park</Link>
                       </h4>
                       <p>
                         High-capacity industrial warehouse and assembly unit structured for long-term operational tenancy.
                       </p>
-                      <Link to="/project-details" className="icon-btn">
+                      <Link to="/projects" className="icon-btn">
                         <i className="far fa-arrow-right" />
                       </Link>
                     </div>
@@ -462,7 +462,7 @@ export default function Home() {
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Corporate Industrial Hub</Link>
+                        <Link to="/projects">Corporate Industrial Hub</Link>
                       </h4>
                       <p>
                         Strategically located commercial and industrial center designed for corporate headquarters and distribution.
@@ -491,7 +491,7 @@ export default function Home() {
                         </span>
                       </div>
                       <h4 className="title">
-                        <Link to="/project-details">Engineered Production Complex</Link>
+                        <Link to="/projects">Engineered Production Complex</Link>
                       </h4>
                       <p>
                         Verified industrial real estate asset with robust power, water, and statutory clearances in place.
