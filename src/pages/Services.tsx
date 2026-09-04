@@ -19,7 +19,6 @@ export default function Services() {
     setIsSubmitting(true);
 
     const form = e.currentTarget;
-
     const formData = new FormData(form);
 
     const payload = {
@@ -45,15 +44,12 @@ export default function Services() {
         throw new Error("Form submission failed");
       }
 
-      // Form submit hone ke baad sabhi fields empty/null
+      // Submit hone ke baad form ke saare fields empty ho jayenge
       form.reset();
 
       // Success message
       setFormSubmitted(true);
-
-      // Error message remove
       setFormError("");
-
     } catch (error) {
       console.error("Form submission error:", error);
 
@@ -62,7 +58,6 @@ export default function Services() {
       );
 
       setFormSubmitted(false);
-
     } finally {
       setIsSubmitting(false);
     }
@@ -101,7 +96,6 @@ export default function Services() {
       <Header variant="one" />
 
       <main>
-
         {/* ================= HERO ================= */}
         <PageHero
           title="Advisory Services"
@@ -112,18 +106,14 @@ export default function Services() {
         <section className="renvia-service_one gray-bg pt-120 pb-80">
           <div className="container">
             <div className="row">
-
               {servicesList.map((srv, idx) => (
                 <div
                   key={idx}
                   className="col-xl-4 col-md-6 col-sm-12"
                 >
                   <div className="renvia-service-card style-one mb-40">
-
                     <div className="content">
-
                       <div className="title-wrap">
-
                         <h4>
                           <Link to="/contact">
                             {srv.title}
@@ -136,7 +126,6 @@ export default function Services() {
                         >
                           <i className="far fa-arrow-right" />
                         </Link>
-
                       </div>
 
                       <p>{srv.desc}</p>
@@ -145,13 +134,10 @@ export default function Services() {
                         src={srv.img}
                         alt={srv.title}
                       />
-
                     </div>
-
                   </div>
                 </div>
               ))}
-
             </div>
           </div>
         </section>
@@ -165,13 +151,9 @@ export default function Services() {
           }}
         >
           <div className="container">
-
             <div className="row align-items-center">
-
               <div className="col-lg-8">
-
                 <div className="renvia-content-box mb-4 mb-xl-0 text-white text-center text-lg-start">
-
                   <h2 className="text-anm">
                     Schedule a Strategic Advisory Session
                   </h2>
@@ -181,15 +163,11 @@ export default function Services() {
                     consultants to unlock strategic value and
                     operational efficiency for your enterprise.
                   </p>
-
                 </div>
-
               </div>
 
               <div className="col-lg-4">
-
                 <div className="renvia-button text-center text-lg-end">
-
                   <a
                     href="#consultation-form"
                     className="theme-btn style-one"
@@ -197,13 +175,9 @@ export default function Services() {
                     Request Consultation
                     <i className="far fa-arrow-right" />
                   </a>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </section>
 
@@ -212,27 +186,21 @@ export default function Services() {
           id="consultation-form"
           className="renvia-contact_two pt-120 pb-120 p-r z-1"
         >
-
           <div className="contact-map">
-
             <img
               src="/assets/images/innerpage/bg/map.png"
               alt="map"
             />
-
           </div>
 
           <div className="container">
-
             <div className="row justify-content-center">
 
               {/* ================= LEFT CONTENT ================= */}
               <div className="col-xl-7 col-lg-10">
-
                 <div className="renvia-content-box mb-5 mb-xl-0">
 
                   <div className="section-title">
-
                     <span className="sub-title">
                       STRATEGIC ADVISORY
 
@@ -240,13 +208,11 @@ export default function Services() {
                         src="/assets/images/line2.png"
                         alt="line"
                       />
-
                     </span>
 
                     <h2 className="text-anm">
                       Request a Strategic Consultation
                     </h2>
-
                   </div>
 
                   <p>
@@ -258,9 +224,8 @@ export default function Services() {
 
                   <div className="row">
 
-                    {/* Location */}
+                    {/* ================= LOCATION ================= */}
                     <div className="col-md-6">
-
                       <div className="renvia-info-item style-one mb-40">
 
                         <div className="icon">
@@ -268,7 +233,6 @@ export default function Services() {
                         </div>
 
                         <div className="content">
-
                           <h5>Location</h5>
 
                           <p>
@@ -277,16 +241,13 @@ export default function Services() {
                             Sitapura, Jaipur,
                             Rajasthan 303022
                           </p>
-
                         </div>
 
                       </div>
-
                     </div>
 
-                    {/* Phone */}
+                    {/* ================= PHONE ================= */}
                     <div className="col-md-6">
-
                       <div className="renvia-info-item style-one mb-40">
 
                         <div className="icon">
@@ -294,7 +255,6 @@ export default function Services() {
                         </div>
 
                         <div className="content">
-
                           <h5>Phone</h5>
 
                           <p>
@@ -302,16 +262,13 @@ export default function Services() {
                               +91 99500 00550
                             </a>
                           </p>
-
                         </div>
 
                       </div>
-
                     </div>
 
-                    {/* Email */}
+                    {/* ================= EMAIL ================= */}
                     <div className="col-md-6">
-
                       <div className="renvia-info-item style-one mb-40">
 
                         <div className="icon">
@@ -319,7 +276,6 @@ export default function Services() {
                         </div>
 
                         <div className="content">
-
                           <h5>Email</h5>
 
                           <p>
@@ -327,18 +283,13 @@ export default function Services() {
                               manghranirealestate@gmail.com
                             </a>
                           </p>
-
-                          
-
                         </div>
 
                       </div>
-
                     </div>
 
-                    {/* Social */}
+                    {/* ================= SOCIAL ================= */}
                     <div className="col-md-6">
-
                       <div className="renvia-info-item style-one mb-40">
 
                         <div className="icon">
@@ -346,49 +297,64 @@ export default function Services() {
                         </div>
 
                         <div className="content">
-
                           <h5>Social</h5>
 
                           <div className="social-box">
 
+                            {/* Facebook */}
                             <a
                               href="https://facebook.com"
                               target="_blank"
                               rel="noreferrer"
+                              aria-label="Facebook"
                             >
                               <i className="fab fa-facebook-f" />
                             </a>
 
-                            <a
-                              href="https://twitter.com"
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              <i className="fab fa-twitter" />
-                            </a>
-
-                            <a
-                              href="https://instagram.com"
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              <i className="fab fa-instagram" />
-                            </a>
-
+                            {/* LinkedIn */}
                             <a
                               href="https://linkedin.com"
                               target="_blank"
                               rel="noreferrer"
+                              aria-label="LinkedIn"
                             >
                               <i className="fab fa-linkedin-in" />
                             </a>
 
-                          </div>
+                            {/* Instagram */}
+                            <a
+                              href="https://instagram.com"
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label="Instagram"
+                            >
+                              <i className="fab fa-instagram" />
+                            </a>
 
+                            {/* YouTube */}
+                            <a
+                              href="https://youtube.com"
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label="YouTube"
+                            >
+                              <i className="fab fa-youtube" />
+                            </a>
+
+                            {/* WhatsApp */}
+                            <a
+                              href="https://wa.me/919950000550"
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label="WhatsApp"
+                            >
+                              <i className="fab fa-whatsapp" />
+                            </a>
+
+                          </div>
                         </div>
 
                       </div>
-
                     </div>
 
                   </div>
@@ -412,7 +378,6 @@ export default function Services() {
                   </div>
 
                 </div>
-
               </div>
 
               {/* ================= FORM ================= */}
@@ -422,14 +387,14 @@ export default function Services() {
 
                   <h4>Send Us message</h4>
 
-                  {/* SUCCESS MESSAGE */}
+                  {/* SUCCESS */}
                   {formSubmitted && (
                     <div className="alert alert-success mt-3 mb-3">
                       Thank you! Your request has been sent successfully.
                     </div>
                   )}
 
-                  {/* ERROR MESSAGE */}
+                  {/* ERROR */}
                   {formError && (
                     <div className="alert alert-danger mt-3 mb-3">
                       {formError}
@@ -442,7 +407,6 @@ export default function Services() {
 
                       {/* FULL NAME */}
                       <div className="col-lg-12">
-
                         <div className="form-group">
 
                           <label>
@@ -459,12 +423,10 @@ export default function Services() {
                           />
 
                         </div>
-
                       </div>
 
                       {/* EMAIL */}
                       <div className="col-lg-12">
-
                         <div className="form-group">
 
                           <label>
@@ -481,12 +443,10 @@ export default function Services() {
                           />
 
                         </div>
-
                       </div>
 
                       {/* COMPANY */}
                       <div className="col-lg-12">
-
                         <div className="form-group">
 
                           <label>
@@ -503,12 +463,10 @@ export default function Services() {
                           />
 
                         </div>
-
                       </div>
 
                       {/* MESSAGE */}
                       <div className="col-lg-12">
-
                         <div className="form-group">
 
                           <label>
@@ -525,12 +483,10 @@ export default function Services() {
                           />
 
                         </div>
-
                       </div>
 
-                      {/* SUBMIT BUTTON */}
+                      {/* SUBMIT */}
                       <div className="col-lg-12">
-
                         <div className="form-group">
 
                           <button
@@ -538,7 +494,6 @@ export default function Services() {
                             className="theme-btn style-one"
                             disabled={isSubmitting}
                           >
-
                             {isSubmitting
                               ? "Sending..."
                               : "Send A Request"}
@@ -546,11 +501,9 @@ export default function Services() {
                             {!isSubmitting && (
                               <i className="far fa-arrow-right" />
                             )}
-
                           </button>
 
                         </div>
-
                       </div>
 
                     </div>
@@ -558,22 +511,17 @@ export default function Services() {
                   </form>
 
                 </div>
-
               </div>
 
             </div>
-
           </div>
-
         </section>
-
       </main>
 
       <Footer
         variant="v1"
         showTopCta={true}
       />
-
     </>
   );
 }
