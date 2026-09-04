@@ -7726,11 +7726,13 @@ label {
   color: var(--text-color);
 }
 .blog-article-hero {
-  height: min(869px, 54.3125vw);
-  min-height: 440px;
+  position: relative;
+  height: clamp(360px, 31.25vw, 500px);
+  min-height: 0;
   background-color: var(--heading-color);
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 }
 .blog-article-hero-content {
   max-width: 900px;
@@ -7886,8 +7888,7 @@ body:has(.blog-article-hero),
 }
 @media (max-width: 767.98px) {
   .blog-article-hero {
-    height: 360px;
-    min-height: 360px;
+    height: 320px;
   }
   .blog-article-hero-content {
     padding: 48px 0 38px;
