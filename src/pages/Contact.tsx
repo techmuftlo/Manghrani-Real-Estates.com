@@ -5,10 +5,46 @@ import PageHero from "../components/PageHero";
 
 export default function Contact() {
   const [formSent, setFormSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormSent(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      "your-name": String(formData.get("name") ?? ""),
+      "email-address": String(formData.get("email") ?? ""),
+      "phone-number": String(formData.get("phone") ?? ""),
+      "your-requirement": String(formData.get("subject") ?? ""),
+      "describe-your-operational-requirements-preferred-area-or-asset-parameters": String(
+        formData.get("message") ?? "",
+      ),
+    };
+
+    try {
+      const response = await fetch("https://crm.muftlo.in/api/forms/submit/form-1ypdiac5t", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => null);
+        throw new Error(error?.message || "Unable to submit your advisory request.");
+      }
+
+      setFormSent(true);
+      e.currentTarget.reset();
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to submit your advisory request.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,6 +115,11 @@ export default function Contact() {
               {formSent && (
                 <div className="alert alert-success mb-4 text-center">
                   Thank you! Your advisory inquiry has been submitted successfully. A senior consultant will contact you promptly.
+                </div>
+              )}
+              {submitError && (
+                <div className="alert alert-danger mb-4 text-center" role="alert">
+                  {submitError}
                 </div>
               )}
               <form onSubmit={handleSubmit} className="contact-form">
@@ -160,8 +201,8 @@ export default function Contact() {
                   </div>
                   <div className="col-lg-12">
                     <div className="form-group text-center">
-                      <button type="submit" className="theme-btn style-one">
-                        Submit Advisory Request <i className="far fa-arrow-right" />
+                      <button type="submit" className="theme-btn style-one" disabled={isSubmitting}>
+                        {isSubmitting ? "Submitting..." : "Submit Advisory Request"} <i className="far fa-arrow-right" />
                       </button>
                     </div>
                   </div>
