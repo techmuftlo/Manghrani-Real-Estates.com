@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export interface FooterProps {
@@ -11,7 +12,39 @@ export default function Footer({
   showCta = true,
   showTopCta,
 }: FooterProps) {
+  const [newsletterStatus, setNewsletterStatus] = useState("");
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
   const shouldShowCta = showTopCta !== undefined ? showTopCta : showCta;
+
+  const handleNewsletterSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const email = String(new FormData(form).get("email") ?? "");
+    setIsNewsletterSubmitting(true);
+    setNewsletterStatus("");
+
+    try {
+      const response = await fetch("https://crm.muftlo.in/api/forms/submit/form-tvir6w7ka", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ "email-address": email }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => null);
+        throw new Error(error?.message || "Unable to subscribe right now.");
+      }
+
+      form.reset();
+      setNewsletterStatus("Thank you for subscribing.");
+    } catch (error) {
+      setNewsletterStatus(error instanceof Error ? error.message : "Unable to subscribe right now.");
+    } finally {
+      setIsNewsletterSubmitting(false);
+    }
+  };
 
   const getFooterClass = () => {
     switch (variant) {
@@ -142,7 +175,7 @@ export default function Footer({
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget footer-nav-widget mb-40">
                 <div className="widget-content">
-                  <h4 className="widget-title">Advisory Practice</h4>
+                  <h4 className="widget-title">Services</h4>
                   <div className="line-wrap">
                     <span />
                     <span />
@@ -162,7 +195,7 @@ export default function Footer({
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget footer-newsletter-widget mb-40">
                 <div className="widget-content">
-                  <h4 className="widget-title">Market Intelligence</h4>
+                  <h4 className="widget-title">Newsletter</h4>
                   <div className="line-wrap">
                     <span />
                     <span />
@@ -171,7 +204,7 @@ export default function Footer({
                   <p>
                     Subscribe for quarterly industrial market insights, RIICO policy briefings, and valuation reports.
                   </p>
-                  <form onSubmit={(e) => e.preventDefault()}>
+                  <form onSubmit={handleNewsletterSubmit}>
                     <div className="form-group">
                       <input
                         type="email"
@@ -180,10 +213,11 @@ export default function Footer({
                         name="email"
                         required
                       />
-                      <button className="submit-btn" type="submit">
+                      <button className="submit-btn" type="submit" disabled={isNewsletterSubmitting} aria-label="Subscribe to newsletter">
                         <i className="far fa-paper-plane" />
                       </button>
                     </div>
+                    {newsletterStatus && <p className="newsletter-status" role="status">{newsletterStatus}</p>}
                   </form>
                 </div>
               </div>
