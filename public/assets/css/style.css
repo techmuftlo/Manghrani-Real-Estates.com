@@ -7726,6 +7726,7 @@ label {
   color: var(--text-color);
 }
 .blog-article-hero {
+  height: min(869px, 54.3125vw);
   min-height: 440px;
   background-color: var(--heading-color);
   background-position: center center;
@@ -7885,6 +7886,7 @@ body:has(.blog-article-hero),
 }
 @media (max-width: 767.98px) {
   .blog-article-hero {
+    height: 360px;
     min-height: 360px;
   }
   .blog-article-hero-content {
