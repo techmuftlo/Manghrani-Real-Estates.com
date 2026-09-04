@@ -92,7 +92,7 @@ export default function Contact() {
                       <input
                         type="text"
                         className="form_control w-100"
-                        placeholder="Your Name / Enterprise Name"
+                        placeholder="Your Name "
                         name="name"
                         required
                       />
@@ -107,7 +107,7 @@ export default function Contact() {
                       <input
                         type="email"
                         className="form_control w-100"
-                        placeholder="Corporate Email Address"
+                        placeholder=" Email Address"
                         name="email"
                         required
                       />
@@ -137,7 +137,7 @@ export default function Contact() {
                       <input
                         type="text"
                         className="form_control w-100"
-                        placeholder="Advisory Requirement (e.g. Sitapura Acquisition, Lease)"
+                        placeholder="Advisory Requirement "
                         name="subject"
                         required
                       />
