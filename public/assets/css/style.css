@@ -7783,6 +7783,14 @@ label {
 .blog-related-section {
   background: var(--white-color);
 }
+.blog-article-page,
+.blog-article-page main,
+.blog-article-page .blog-article-section,
+.blog-article-page .blog-related-section,
+body:has(.blog-article-hero),
+#root:has(.blog-article-hero) {
+  background: var(--white-color);
+}
 .blog-article-card {
   border: 0;
   border-radius: 0;

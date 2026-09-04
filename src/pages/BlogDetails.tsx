@@ -74,7 +74,7 @@ export default function BlogDetails() {
   return (
     <>
       <Header variant="one" />
-      <main>
+      <main className="blog-article-page">
         {isLoading && <div className="blog-loading-state">Loading blog post...</div>}
         {!isLoading && error && <div className="blog-loading-state text-danger">{error}</div>}
         {!isLoading && !error && post && (
