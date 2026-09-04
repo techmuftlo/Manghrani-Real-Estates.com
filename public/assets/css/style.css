@@ -7726,9 +7726,10 @@ label {
   color: var(--text-color);
 }
 .blog-article-hero {
-  min-height: 390px;
+  min-height: 440px;
   background-color: var(--heading-color);
   background-position: center center;
+  background-size: cover;
 }
 .blog-article-hero-content {
   max-width: 900px;
@@ -7804,6 +7805,8 @@ label {
 }
 .blog-back-link-wrap {
   padding: 28px 0 0;
+  display: flex;
+  justify-content: center;
 }
 .blog-back-link {
   display: inline-flex;
@@ -7882,7 +7885,7 @@ body:has(.blog-article-hero),
 }
 @media (max-width: 767.98px) {
   .blog-article-hero {
-    min-height: 320px;
+    min-height: 360px;
   }
   .blog-article-hero-content {
     padding: 48px 0 38px;
