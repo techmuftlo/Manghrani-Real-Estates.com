@@ -193,6 +193,9 @@ function getTags(record: Record<string, unknown>) {
   if (Array.isArray(tags)) {
     return tags.map((tag) => typeof tag === "string" ? tag : getString(asRecord(tag), ["name", "title"])).filter(Boolean);
   }
+  if (typeof tags === "string") {
+    return tags.split(",").map((tag) => tag.trim()).filter(Boolean);
+  }
   return [];
 }
 
