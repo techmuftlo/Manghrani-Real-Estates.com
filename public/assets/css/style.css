@@ -3716,13 +3716,13 @@ label {
   from {
     transform: translateX(0);
   }
-  @media (prefers-reduced-motion: reduce) {
-    .service-slider {
-      animation: none;
-    }
-  }
   to {
     transform: translateX(-55.555%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-slider {
+    animation: none;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -7692,7 +7692,7 @@ label {
   color: var(--text-color);
 }
 .blog-article-content th {
-  background: var(--heading-color);
+  background: #ff4136;
   color: var(--white-color);
 }
 .blog-article-content th strong,
