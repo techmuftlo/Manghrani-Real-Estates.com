@@ -7888,13 +7888,20 @@ body:has(.blog-article-hero),
 }
 @media (max-width: 767.98px) {
   .blog-article-hero {
-    height: 320px;
+    height: auto;
+    min-height: 360px;
   }
   .blog-article-hero-content {
-    padding: 48px 0 38px;
+    width: 100%;
+    padding: 58px 0 48px;
+    text-align: center;
   }
   .blog-article-hero h1 {
     font-size: 30px;
+    line-height: 1.18;
+  }
+  .blog-article-breadcrumb {
+    justify-content: center;
   }
   .blog-article-section {
     padding: 54px 0 70px;
