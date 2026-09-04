@@ -14,7 +14,7 @@ export default function Services() {
 
   const servicesList = [
     {
-      title: "Industrial Acquisition & Divestment Advisory",
+      title: "Industrial Acquisition ",
       img: "/assets/images/home-one/services/service-img1.png",
       desc: "Strategic advisory and rigorous due diligence for acquiring or divesting prime manufacturing facilities across Jaipur.",
     },
@@ -29,7 +29,7 @@ export default function Services() {
       desc: "End-to-end guidance in sourcing, evaluating, and securing high-performance industrial land and facilities.",
     },
     {
-      title: "Industrial Investment Advisory",
+      title: "Industrial Investment ",
       img: "/assets/images/home-one/services/service-img4.png",
       desc: "Data-backed investment advisory, risk assessment, and capital allocation for high-yield industrial real estate in Jaipur.",
     },
