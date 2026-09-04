@@ -1208,7 +1208,7 @@ export default function Home() {
 }
 
 .mre-leadership-social a:hover{
-  background:#172337;
+  background:#ff4136;
   border-color:#172337;
   color:#ffffff;
   transform:translateY(-3px);
