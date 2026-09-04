@@ -7785,7 +7785,7 @@ label {
   background: var(--white-color);
 }
 .blog-article-content th {
-  background: var(--heading-color);
+  background: #ff4136;
   border-color: var(--heading-color);
 }
 .blog-article-content td {
