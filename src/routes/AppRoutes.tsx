@@ -61,6 +61,7 @@ export default function AppRoutes() {
         <Route path="/blog-grid.html" element={<BlogGrid />} />
 
         <Route path="/blog-details" element={<BlogDetails />} />
+        <Route path="/blog-details/:slug" element={<BlogDetails />} />
         <Route path="/blog-details.html" element={<BlogDetails />} />
 
         <Route path="/contact" element={<Contact />} />

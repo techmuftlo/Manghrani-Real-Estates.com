@@ -1,74 +1,23 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
+import { fetchTenantBlogs, type BlogPost } from "../services/blogApi";
 
 export default function BlogGrid() {
-  const posts = [
-    {
-      id: 1,
-      title: "How to Evaluate a Commercial Real Estate Investment",
-      category: "Company Insights",
-      img: "/assets/images/innerpage/blog/blog-grid1.jpg",
-      tags: ["Investment", "Commercial Property", "Buyer"],
-    },
-    {
-      id: 2,
-      title: "The Role of ESG in Modern Property Development",
-      category: "Sustainability",
-      img: "/assets/images/innerpage/blog/blog-grid2.jpg",
-      tags: ["Sustainability", "Property", "Development"],
-    },
-    {
-      id: 3,
-      title: "Risk Factors to Consider in Property Development",
-      category: "Advisory",
-      img: "/assets/images/innerpage/blog/blog-grid3.jpg",
-      tags: ["Advisory", "Investment", "Property"],
-    },
-    {
-      id: 4,
-      title: "How Urbanization Is Shaping Future Real Estate Investments",
-      category: "Market Trends",
-      img: "/assets/images/innerpage/blog/blog-grid4.jpg",
-      tags: ["Market Trends", "Investment", "Real Estate"],
-    },
-    {
-      id: 5,
-      title: "Strategies for Long-Term Portfolio Capital Growth",
-      category: "Finance",
-      img: "/assets/images/innerpage/blog/blog-grid5.jpg",
-      tags: ["Finance", "Investment", "Capital Growth"],
-    },
-    {
-      id: 6,
-      title: "Green Building Trends: What Investors Need to Know",
-      category: "Architecture",
-      img: "/assets/images/innerpage/blog/blog-grid6.jpg",
-      tags: ["Architecture", "Green Building", "Property"],
-    },
-    {
-      id: 7,
-      title: "Signet Breaks Ground on Foundry Lofts in Midtown",
-      category: "Development",
-      img: "/assets/images/innerpage/blog/blog-grid7.jpg",
-      tags: ["Development", "Industrial Property", "Factory"],
-    },
-    {
-      id: 8,
-      title: "Transforming Communities: The Impact of Dedicated Real Estate",
-      category: "Community",
-      img: "/assets/images/innerpage/blog/blog-grid8.jpg",
-      tags: ["Community", "Real Estate", "Development"],
-    },
-    {
-      id: 9,
-      title: "Smart Home & Automation Innovations in 2025 Residences",
-      category: "Technology",
-      img: "/assets/images/innerpage/blog/blog-grid9.jpg",
-      tags: ["Technology", "Smart Home", "Innovation"],
-    },
-  ];
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetchTenantBlogs()
+      .then(setPosts)
+      .catch((requestError: unknown) => {
+        setError(requestError instanceof Error ? requestError.message : "Unable to load blog posts right now.");
+      })
+      .finally(() => setIsLoading(false));
+  }, []);
 
   return (
     <>
@@ -82,7 +31,11 @@ export default function BlogGrid() {
           <div className="container">
             <div className="row justify-content-center">
 
-              {posts.map((post) => (
+              {isLoading && <p className="text-center">Loading blog posts...</p>}
+              {!isLoading && error && <p className="text-center text-danger">{error}</p>}
+              {!isLoading && !error && posts.length === 0 && <p className="text-center">No blog posts are available yet.</p>}
+
+              {!isLoading && !error && posts.map((post) => (
                 <div
                   key={post.id}
                   className="col-xl-4 col-md-6 col-sm-12"
@@ -92,7 +45,7 @@ export default function BlogGrid() {
                     {/* Image */}
                     <div className="post-thumbnail">
                       <img
-                        src={post.img}
+                        src={post.image}
                         alt={post.title}
                       />
                     </div>
@@ -108,14 +61,14 @@ export default function BlogGrid() {
                               post.category
                             )}`}
                           >
-                            {post.category}
+                            {post.category || "Insights"}
                           </Link>
                         </span>
                       </div>
 
                       {/* Title */}
                       <h4 className="title">
-                        <Link to="/blog-details">
+                        <Link to={`/blog-details/${post.slug || post.id}`}>
                           {post.title}
                         </Link>
                       </h4>
@@ -135,7 +88,7 @@ export default function BlogGrid() {
 
                       {/* Read More */}
                       <Link
-                        to="/blog-details"
+                        to={`/blog-details/${post.slug || post.id}`}
                         className="read-more style-one"
                       >
                         Read Details
@@ -149,56 +102,6 @@ export default function BlogGrid() {
 
             </div>
 
-            {/* Pagination */}
-            <div className="theme-pagination text-center mt-30">
-              <ul>
-                <li>
-                  <a
-                    href="#prev"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="far fa-arrow-left" />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#1"
-                    className="active"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    01
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#2"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    02
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#3"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    03
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#next"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="far fa-arrow-right" />
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </section>
         {/* ====== End Blog Grid Section ====== */}

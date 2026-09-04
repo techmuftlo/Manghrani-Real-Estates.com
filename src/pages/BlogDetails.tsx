@@ -1,207 +1,113 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
+import { fetchBlogPost, fetchSimilarBlogs, type BlogPost } from "../services/blogApi";
+
+function formatDate(value: string) {
+  if (!value) return "";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleDateString();
+}
 
 export default function BlogDetails() {
+  const { slug } = useParams<{ slug: string }>();
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [similarPosts, setSimilarPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!slug) {
+      setError("This blog post could not be found.");
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+    Promise.all([fetchBlogPost(slug), fetchSimilarBlogs(slug)])
+      .then(([blogPost, relatedPosts]) => {
+        setPost(blogPost);
+        setSimilarPosts(relatedPosts);
+      })
+      .catch((requestError: unknown) => {
+        setError(requestError instanceof Error ? requestError.message : "Unable to load this blog post right now.");
+      })
+      .finally(() => setIsLoading(false));
+  }, [slug]);
+
   return (
     <>
       <Header variant="one" />
-
       <main>
-        <PageHero title="Blog Details" breadcrumb="Blog Details" />
-
-        {/* ====== Start Blog Details Section ====== */}
+        <PageHero title={post?.title || "Blog Details"} breadcrumb="Blog Details" />
         <section className="renvia-blog-details-sec pt-120 pb-70">
           <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-10 col-lg-11 col-md-12">
-                <div className="blog-details-wrapper">
-
-                  {/* ====== Blog Post ====== */}
-                  <div className="blog-post-main">
-                    <div className="blog-post-item">
-
-                      {/* Main Image */}
+            {isLoading && <p className="text-center">Loading blog post...</p>}
+            {!isLoading && error && <p className="text-center text-danger">{error}</p>}
+            {!isLoading && !error && post && (
+              <div className="row justify-content-center">
+                <div className="col-xl-10 col-lg-11 col-md-12">
+                  <article className="blog-details-wrapper">
+                    {post.image && (
                       <div className="post-thumbnail">
-                        <img
-                          src="/assets/images/innerpage/blog/blog-single1.jpg"
-                          alt="Industrial Real Estate"
-                          className="img-fluid w-100"
-                        />
+                        <img src={post.image} alt={post.title} className="img-fluid w-100" />
                       </div>
-
-                      {/* Content */}
-                      <div className="post-content">
-
-                        {/* Author Only */}
-                        <div className="post-meta">
-                          <span>
-                            <i className="far fa-user" /> By{" "}
-                            <Link to="/about">Admin</Link>
-                          </span>
+                    )}
+                    <div className="post-content mt-30">
+                      <div className="post-meta">
+                        <span><i className="far fa-user" /> By {post.author}</span>
+                        {post.publishedAt && <span className="ms-3">{formatDate(post.publishedAt)}</span>}
+                      </div>
+                      <h1 className="title">{post.title}</h1>
+                      {post.category && <p className="mb-3"><strong>{post.category}</strong></p>}
+                      {post.excerpt && <p>{post.excerpt}</p>}
+                      {post.content && <div dangerouslySetInnerHTML={{ __html: post.content }} />}
+                      {post.tags.length > 0 && (
+                        <div className="tag-links mt-30">
+                          <span>Tags:</span>
+                          {post.tags.map((tag) => (
+                            <Link key={tag} to={`/blog-grid?tag=${encodeURIComponent(tag)}`}>{tag}</Link>
+                          ))}
                         </div>
-
-                        {/* Title */}
-                        <h1 className="title">
-                          How Urbanization & Smart Tech Are Shaping Modern Real
-                          Estate
-                        </h1>
-
-                        <p>
-                          Urban development in major economic hubs is undergoing
-                          a seismic transformation. The convergence of
-                          sustainable architecture, modular construction, and
-                          smart home automation enables developers to deliver
-                          spaces that maximize both lifestyle quality and
-                          long-term capital appreciation.
-                        </p>
-
-                        <p>
-                          Investors seeking resilient yields are increasingly
-                          focusing on mixed-use assets and transit-oriented
-                          corridors that offer high footfall and lower vacancy
-                          risks across changing market cycles.
-                        </p>
-
-                        {/* Quote */}
-                        <blockquote>
-                          <div className="content">
-                            <p>
-                              “Sustainable developments with strong ESG
-                              compliance are not only better for the environment,
-                              they consistently command superior asset
-                              valuations and tenant retention over a 10-year
-                              horizon.”
-                            </p>
-
-                            <h5>
-                              Martin & Michiel, Lead Strategists
-                            </h5>
-                          </div>
-                        </blockquote>
-
-                        <p>
-                          Our in-house design and project management teams
-                          evaluate zoning trends, infrastructure expansions, and
-                          demographic shifts to ensure each development exceeds
-                          market standards.
-                        </p>
-
-                        {/* Two Images */}
-                        <div className="row my-4">
-                          <div className="col-md-6 mb-4 mb-md-0">
-                            <div className="axis-image">
-                              <img
-                                src="/assets/images/innerpage/blog/blog-single2.jpg"
-                                alt="Industrial property interior"
-                                className="img-fluid rounded w-100"
-                              />
-                            </div>
-                          </div>
-
-                          <div className="col-md-6">
-                            <div className="axis-image">
-                              <img
-                                src="/assets/images/innerpage/blog/blog-single3.jpg"
-                                alt="Industrial property exterior"
-                                className="img-fluid rounded w-100"
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        <p>
-                          By integrating renewable power solutions, high-grade
-                          soundproofing, and concierge technology, modern
-                          developments offer unparalleled residential luxury
-                          while minimizing operating costs.
-                        </p>
-
-                        <p>
-                          For businesses and investors, selecting the right
-                          industrial property requires careful evaluation of
-                          location, connectivity, infrastructure, property
-                          condition, and future growth potential.
-                        </p>
-
-                      </div>
+                      )}
                     </div>
-
-                    {/* ====== Tags & Share ====== */}
-                    <div className="entry-footer mt-30">
-
-                      <div className="tag-links">
-                        <span>Tag:</span>
-
-                        <Link to="/blog-grid?tag=Factory">
-                          Factory
-                        </Link>
-
-                        <Link to="/blog-grid?tag=Industrial%20Property">
-                          Industrial Property
-                        </Link>
-
-                        <Link to="/blog-grid?tag=Sale%20%2F%20Rent">
-                          Sale / Rent
-                        </Link>
-
-                        <Link to="/blog-grid?tag=Investment">
-                          Investment
-                        </Link>
-                      </div>
-
-                      <div className="social-share">
-                        <span>Share:</span>
-
-                        <a
-                          href="https://facebook.com"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Facebook"
-                        >
-                          <i className="fab fa-facebook-f" />
-                        </a>
-
-                        <a
-                          href="https://instagram.com"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Instagram"
-                        >
-                          <i className="fab fa-instagram" />
-                        </a>
-
-                        <a
-                          href="https://linkedin.com"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="LinkedIn"
-                        >
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-
-                        <a
-                          href="https://twitter.com"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Twitter"
-                        >
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </div>
-
-                    </div>
-                  </div>
-
+                  </article>
                 </div>
               </div>
-            </div>
+            )}
+
+            {!isLoading && !error && similarPosts.length > 0 && (
+              <div className="row mt-60">
+                <div className="col-lg-12"><h3 className="mb-30">Similar Blogs</h3></div>
+                {similarPosts.map((similarPost) => (
+                  <div className="col-xl-4 col-md-6 col-sm-12" key={similarPost.id}>
+                    <div className="renvia-blog-post-item style-one mb-30">
+                      {similarPost.image && (
+                        <div className="post-thumbnail">
+                          <img src={similarPost.image} alt={similarPost.title} />
+                        </div>
+                      )}
+                      <div className="post-content">
+                        {similarPost.category && <div className="post-tags"><span>{similarPost.category}</span></div>}
+                        <h4 className="title">
+                          <Link to={`/blog-details/${similarPost.slug || similarPost.id}`}>{similarPost.title}</Link>
+                        </h4>
+                        {similarPost.excerpt && <p>{similarPost.excerpt}</p>}
+                        <Link to={`/blog-details/${similarPost.slug || similarPost.id}`} className="read-more style-one">
+                          Read Details <i className="far fa-arrow-right" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
-        {/* ====== End Blog Details Section ====== */}
       </main>
-
       <Footer variant="v1" showTopCta={true} />
     </>
   );
