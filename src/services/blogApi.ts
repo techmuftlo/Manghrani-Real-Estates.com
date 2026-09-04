@@ -191,11 +191,14 @@ function getMediaUrl(record: Record<string, unknown>) {
 
 function getTags(record: Record<string, unknown>) {
   const tags = record.tags;
+  const removeConstructionGuide = (tag: string) => tag.replace(/^#\s*/, "").trim().toLowerCase() !== "construction guide";
   if (Array.isArray(tags)) {
-    return tags.map((tag) => typeof tag === "string" ? tag : getString(asRecord(tag), ["name", "title"])).filter(Boolean);
+    return tags
+      .map((tag) => typeof tag === "string" ? tag : getString(asRecord(tag), ["name", "title"]))
+      .filter((tag): tag is string => Boolean(tag) && removeConstructionGuide(tag));
   }
   if (typeof tags === "string") {
-    return tags.split(",").map((tag) => tag.trim()).filter(Boolean);
+    return tags.split(",").map((tag) => tag.trim()).filter((tag) => Boolean(tag) && removeConstructionGuide(tag));
   }
   return [];
 }
