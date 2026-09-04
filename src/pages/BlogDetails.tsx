@@ -137,14 +137,13 @@ export default function BlogDetails() {
 
                       <div className="blog-article-content" dangerouslySetInnerHTML={{ __html: blogMarkdownToHtml(articleContent) }} />
 
-                      {post.tags.length > 0 && (
-                        <div className="blog-article-tags">
-                          <span>Topics</span>
-                          {post.tags.map((tag) => <Link key={tag} to={`/blog-grid?tag=${encodeURIComponent(tag)}`}>#{tag}</Link>)}
-                        </div>
-                      )}
                     </div>
                   </article>
+                  <div className="blog-back-link-wrap">
+                    <Link to="/blog-grid" className="blog-back-link">
+                      <i className="far fa-arrow-left" /> Back to All Blogs
+                    </Link>
+                  </div>
                 </div>
               </div>
             </section>

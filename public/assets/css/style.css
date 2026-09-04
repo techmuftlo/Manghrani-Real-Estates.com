@@ -7798,6 +7798,28 @@ label {
 .blog-related-card {
   background: var(--white-color);
 }
+.blog-back-link-wrap {
+  padding: 28px 0 0;
+}
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.blog-back-link i {
+  color: var(--primary-color);
+  transition: transform 0.25s ease;
+}
+.blog-back-link:hover {
+  color: var(--primary-color);
+}
+.blog-back-link:hover i {
+  transform: translateX(-4px);
+}
 .blog-article-section,
 .blog-related-section {
   background: var(--white-color);
