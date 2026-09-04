@@ -192,6 +192,16 @@ export default function Header({ variant = "four" }: HeaderProps) {
 
                       <li>
                         <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i className="fab fa-instagram" />
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
                           href="https://youtube.com"
                           target="_blank"
                           rel="noreferrer"

@@ -117,13 +117,6 @@ export default function Footer({
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a
                       href="https://linkedin.com"
                       target="_blank"
                       rel="noreferrer"
@@ -131,11 +124,25 @@ export default function Footer({
                       <i className="fab fa-linkedin-in" />
                     </a>
                     <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fab fa-instagram" />
+                    </a>
+                    <a
                       href="https://youtube.com"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <i className="fab fa-youtube" />
+                    </a>
+                    <a
+                      href="https://wa.me/919950000550"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fab fa-whatsapp" />
                     </a>
                   </div>
                 </div>

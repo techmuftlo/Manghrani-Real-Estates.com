@@ -890,6 +890,15 @@ export default function Home() {
             </a>
 
             <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+            >
+              <i className="fab fa-youtube"></i>
+            </a>
+
+            <a
               href="https://wa.me/919950000550"
               target="_blank"
               rel="noreferrer"
