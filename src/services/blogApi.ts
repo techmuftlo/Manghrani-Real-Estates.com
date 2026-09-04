@@ -24,18 +24,60 @@ export function blogMarkdownToHtml(markdown: string) {
   const lines = escapeHtml(markdown).replace(/\r/g, "").split("\n");
   const html: string[] = [];
   let listItems: string[] = [];
+  let orderedListItems: string[] = [];
+
+  const formatInline = (value: string) => value
+    .replace(/!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g, '<img src="$2" alt="$1" />')
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>')
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/__(.+?)__/g, "<strong>$1</strong>")
+    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    .replace(/_(.+?)_/g, "<em>$1</em>");
 
   const closeList = () => {
     if (listItems.length > 0) {
-      html.push(`<ul>${listItems.join("")}</ul>`);
+      html.push(`<ul>${listItems.map(formatInline).join("")}</ul>`);
       listItems = [];
+    }
+    if (orderedListItems.length > 0) {
+      html.push(`<ol>${orderedListItems.map(formatInline).join("")}</ol>`);
+      orderedListItems = [];
     }
   };
 
-  for (const line of lines) {
+  const isTableRow = (value: string) => /^\|?\s*[^|]+(?:\|[^|]+)+\s*\|?$/.test(value);
+  const isTableDivider = (value: string) => /^\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?$/.test(value);
+  const parseTableCells = (value: string) => value.replace(/^\|\s*|\s*\|$/g, "").split("|").map((cell) => cell.trim());
+
+  const addTable = (tableLines: string[]) => {
+    const headerCells = parseTableCells(tableLines[0]);
+    const bodyLines = tableLines.slice(2);
+    const header = `<thead><tr>${headerCells.map((cell) => `<th>${formatInline(cell)}</th>`).join("")}</tr></thead>`;
+    const body = bodyLines.map((tableLine) => {
+      const cells = parseTableCells(tableLine);
+      return `<tr>${cells.map((cell) => `<td>${formatInline(cell)}</td>`).join("")}</tr>`;
+    }).join("");
+    html.push(`<div class="blog-table-wrap"><table>${header}<tbody>${body}</tbody></table></div>`);
+  };
+
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+    const line = lines[lineIndex];
     const trimmed = line.trim();
     if (!trimmed) {
       closeList();
+      continue;
+    }
+    const nextLine = lines[lineIndex + 1]?.trim() || "";
+    if (isTableRow(trimmed) && isTableDivider(nextLine)) {
+      closeList();
+      const tableLines = [trimmed, nextLine];
+      let tableIndex = lineIndex + 2;
+      while (tableIndex < lines.length && isTableRow(lines[tableIndex].trim())) {
+        tableLines.push(lines[tableIndex].trim());
+        tableIndex += 1;
+      }
+      addTable(tableLines);
+      lineIndex = tableIndex - 1;
       continue;
     }
     const listMatch = trimmed.match(/^[-*]\s+(.+)$/);
@@ -43,18 +85,21 @@ export function blogMarkdownToHtml(markdown: string) {
       listItems.push(`<li>${listMatch[1]}</li>`);
       continue;
     }
+    const orderedListMatch = trimmed.match(/^\d+[.)]\s+(.+)$/);
+    if (orderedListMatch) {
+      orderedListItems.push(`<li>${orderedListMatch[1]}</li>`);
+      continue;
+    }
     closeList();
-    if (/^###\s+/.test(trimmed)) html.push(`<h3>${trimmed.slice(4)}</h3>`);
-    else if (/^##\s+/.test(trimmed)) html.push(`<h2>${trimmed.slice(3)}</h2>`);
-    else if (/^#\s+/.test(trimmed)) html.push(`<h2>${trimmed.slice(2)}</h2>`);
+    if (/^###\s+/.test(trimmed)) html.push(`<h3>${formatInline(trimmed.slice(4))}</h3>`);
+    else if (/^##\s+/.test(trimmed)) html.push(`<h2>${formatInline(trimmed.slice(3))}</h2>`);
+    else if (/^#\s+/.test(trimmed)) html.push(`<h2>${formatInline(trimmed.slice(2))}</h2>`);
     else if (/^---+$/.test(trimmed)) html.push("<hr />");
-    else html.push(`<p>${trimmed}</p>`);
+    else html.push(`<p>${formatInline(trimmed)}</p>`);
   }
   closeList();
 
-  return html.join("")
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>");
+  return html.join("");
 }
 
 const API_BASE_URL = "https://crm.muftlo.in/api/public/blogs";

@@ -82,7 +82,7 @@ export default function BlogDetails() {
             )}
 
             {!isLoading && !error && similarPosts.length > 0 && (
-              <div className="row mt-60">
+              <div className="row mt-60 blog-details-similar">
                 <div className="col-lg-12"><h3 className="mb-30">Similar Blogs</h3></div>
                 {similarPosts.map((similarPost) => (
                   <div className="col-xl-4 col-md-6 col-sm-12" key={similarPost.id}>
