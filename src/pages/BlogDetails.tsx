@@ -81,7 +81,9 @@ export default function BlogDetails() {
           <>
             <section
               className="blog-article-hero"
-              style={{ backgroundImage: `url('${post.image || "/assets/images/innerpage/bg/page-bg.jpeg"}')` }}
+              style={{
+                backgroundImage: `url('${post.image || "/assets/images/innerpage/bg/page-bg.jpeg"}')`,
+              }}
             >
               <div className="container">
                 <div className="blog-article-hero-content">
