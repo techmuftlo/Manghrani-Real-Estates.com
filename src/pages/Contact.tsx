@@ -137,7 +137,7 @@ export default function Contact() {
                       <input
                         type="text"
                         className="form_control w-100"
-                        placeholder="Advisory Requirement "
+                        placeholder="Your Requirement "
                         name="subject"
                         required
                       />
