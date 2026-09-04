@@ -81,7 +81,7 @@ export default function BlogDetails() {
           <>
             <section
               className="blog-article-hero"
-              style={{ backgroundImage: `linear-gradient(90deg, rgba(15, 22, 38, 0.86), rgba(15, 22, 38, 0.48)), url('${post.image || "/assets/images/innerpage/bg/page-bg.jpeg"}')` }}
+              style={{ backgroundImage: `url('${post.image || "/assets/images/innerpage/bg/page-bg.jpeg"}')` }}
             >
               <div className="container">
                 <div className="blog-article-hero-content">
