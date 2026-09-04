@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -24,8 +24,15 @@ export default function Home() {
       .finally(() => setIsBlogsLoading(false));
   }, []);
 
+  useLayoutEffect(() => {
+    document.querySelectorAll<HTMLImageElement>("main img").forEach((image) => {
+      image.fetchPriority = "high";
+    });
+  }, []);
+
   return (
     <>
+      <link rel="preload" as="image" href={heroSlides[0].bg} fetchPriority="high" />
       <Header variant="one" />
 
       <main>
