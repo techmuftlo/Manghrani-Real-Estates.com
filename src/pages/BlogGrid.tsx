@@ -43,12 +43,11 @@ export default function BlogGrid() {
                   <div className="renvia-blog-post-item style-one mb-30">
 
                     {/* Image */}
-                    <div className="post-thumbnail">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                      />
-                    </div>
+                    {post.image && (
+                      <div className="post-thumbnail">
+                        <img src={post.image} alt={post.title} />
+                      </div>
+                    )}
 
                     {/* Content */}
                     <div className="post-content">

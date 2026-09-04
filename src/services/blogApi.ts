@@ -11,7 +11,54 @@ export type BlogPost = {
   publishedAt: string;
 };
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+export function blogMarkdownToHtml(markdown: string) {
+  const lines = escapeHtml(markdown).replace(/\r/g, "").split("\n");
+  const html: string[] = [];
+  let listItems: string[] = [];
+
+  const closeList = () => {
+    if (listItems.length > 0) {
+      html.push(`<ul>${listItems.join("")}</ul>`);
+      listItems = [];
+    }
+  };
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      closeList();
+      continue;
+    }
+    const listMatch = trimmed.match(/^[-*]\s+(.+)$/);
+    if (listMatch) {
+      listItems.push(`<li>${listMatch[1]}</li>`);
+      continue;
+    }
+    closeList();
+    if (/^###\s+/.test(trimmed)) html.push(`<h3>${trimmed.slice(4)}</h3>`);
+    else if (/^##\s+/.test(trimmed)) html.push(`<h2>${trimmed.slice(3)}</h2>`);
+    else if (/^#\s+/.test(trimmed)) html.push(`<h2>${trimmed.slice(2)}</h2>`);
+    else if (/^---+$/.test(trimmed)) html.push("<hr />");
+    else html.push(`<p>${trimmed}</p>`);
+  }
+  closeList();
+
+  return html.join("")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.+?)\*/g, "<em>$1</em>");
+}
+
 const API_BASE_URL = "https://crm.muftlo.in/api/public/blogs";
+const API_ORIGIN = "https://crm.muftlo.in";
 
 function getTenantDomain() {
   return import.meta.env.VITE_TENANT_DOMAIN || window.location.hostname;
@@ -30,6 +77,13 @@ function getString(record: Record<string, unknown>, keys: string[]) {
   return "";
 }
 
+function getMediaUrl(record: Record<string, unknown>) {
+  const value = getString(record, ["image", "image_url", "featured_image", "featuredImage", "cover_image", "coverImage", "thumbnail"]);
+  if (!value) return "";
+  if (/^https?:\/\//i.test(value)) return value;
+  return `${API_ORIGIN}/${value.replace(/^\/+/, "")}`;
+}
+
 function getTags(record: Record<string, unknown>) {
   const tags = record.tags;
   if (Array.isArray(tags)) {
@@ -46,7 +100,7 @@ export function normalizeBlogPost(value: unknown, index = 0): BlogPost {
     slug: getString(record, ["slug", "url_slug", "permalink"]),
     title: getString(record, ["title", "name"]) || "Untitled Blog Post",
     category,
-    image: getString(record, ["image", "image_url", "featured_image", "cover_image", "thumbnail"]),
+    image: getMediaUrl(record),
     tags: getTags(record),
     excerpt: getString(record, ["excerpt", "summary", "short_description", "description"]),
     content: getString(record, ["content", "body", "html_content", "description"]),

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
-import { fetchBlogPost, fetchSimilarBlogs, type BlogPost } from "../services/blogApi";
+import { blogMarkdownToHtml, fetchBlogPost, fetchSimilarBlogs, type BlogPost } from "../services/blogApi";
 
 function formatDate(value: string) {
   if (!value) return "";
@@ -64,7 +64,9 @@ export default function BlogDetails() {
                       <h1 className="title">{post.title}</h1>
                       {post.category && <p className="mb-3"><strong>{post.category}</strong></p>}
                       {post.excerpt && <p>{post.excerpt}</p>}
-                      {post.content && <div dangerouslySetInnerHTML={{ __html: post.content }} />}
+                      {post.content && (
+                        <div dangerouslySetInnerHTML={{ __html: blogMarkdownToHtml(post.content) }} />
+                      )}
                       {post.tags.length > 0 && (
                         <div className="tag-links mt-30">
                           <span>Tags:</span>
