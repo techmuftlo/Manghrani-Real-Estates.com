@@ -79,6 +79,7 @@ export function blogMarkdownToHtml(markdown: string) {
   let orderedListItems: string[] = [];
 
   const formatInline = (value: string) => value
+    .replace(/\[Construction Guide\]\(https:\/\/manghranirealestates\.com\/blog-grid\?tag=Construction(?:%20|\s)+Guide\)/gi, "")
     .replace(/!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g, '<img src="$2" alt="$1" />')
     .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
