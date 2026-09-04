@@ -29,7 +29,7 @@ export default function Footer({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ "email-address": email }),
+        body: JSON.stringify({ "enter-your-email": email }),
       });
 
       if (!response.ok) {
