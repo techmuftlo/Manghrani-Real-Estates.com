@@ -50,7 +50,7 @@ export default function BlogDetails() {
             {!isLoading && !error && post && (
               <div className="row justify-content-center">
                 <div className="col-xl-10 col-lg-11 col-md-12">
-                  <article className="blog-details-wrapper">
+                  <article className="blog-details-wrapper blog-post-item">
                     {post.image && (
                       <div className="post-thumbnail">
                         <img src={post.image} alt={post.title} className="img-fluid w-100" />
@@ -65,7 +65,7 @@ export default function BlogDetails() {
                       {post.category && <p className="mb-3"><strong>{post.category}</strong></p>}
                       {post.excerpt && <p>{post.excerpt}</p>}
                       {post.content && (
-                        <div dangerouslySetInnerHTML={{ __html: blogMarkdownToHtml(post.content) }} />
+                        <div className="blog-article-content" dangerouslySetInnerHTML={{ __html: blogMarkdownToHtml(post.content) }} />
                       )}
                       {post.tags.length > 0 && (
                         <div className="tag-links mt-30">

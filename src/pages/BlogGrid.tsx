@@ -29,7 +29,7 @@ export default function BlogGrid() {
         {/* ====== Start Blog Grid Section ====== */}
         <section className="renvia-blog-grid-sec pt-120 pb-120">
           <div className="container">
-            <div className="row justify-content-center">
+            <div className="row justify-content-start blog-grid-list">
 
               {isLoading && <p className="text-center">Loading blog posts...</p>}
               {!isLoading && error && <p className="text-center text-danger">{error}</p>}
