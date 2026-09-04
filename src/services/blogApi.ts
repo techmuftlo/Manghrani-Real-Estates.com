@@ -11,6 +11,58 @@ export type BlogPost = {
   publishedAt: string;
 };
 
+export type BlogHeading = {
+  id: string;
+  title: string;
+  level: 2 | 3;
+};
+
+export function blogHeadingId(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/<[^>]+>/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "") || "article-section";
+}
+
+export function extractBlogHeadings(markdown: string): BlogHeading[] {
+  return markdown
+    .replace(/\r/g, "")
+    .split("\n")
+    .map((line) => line.trim().match(/^(##|###)\s+(.+)$/))
+    .filter((match): match is RegExpMatchArray => Boolean(match))
+    .map((match) => ({
+      id: blogHeadingId(match[2]),
+      title: match[2].replace(/[*_]/g, ""),
+      level: match[1].length as 2 | 3,
+    }));
+}
+
+export function extractBlogSection(markdown: string, title: string) {
+  const lines = markdown.replace(/\r/g, "").split("\n");
+  const target = title.toLowerCase();
+  const start = lines.findIndex((line) => line.replace(/^#+\s*/, "").trim().toLowerCase() === target);
+  if (start === -1) return "";
+
+  const content: string[] = [];
+  for (let index = start + 1; index < lines.length; index += 1) {
+    if (/^#{1,3}\s+/.test(lines[index].trim())) break;
+    content.push(lines[index]);
+  }
+  return content.join("\n").trim();
+}
+
+export function removeBlogSection(markdown: string, title: string) {
+  const lines = markdown.replace(/\r/g, "").split("\n");
+  const target = title.toLowerCase();
+  const start = lines.findIndex((line) => line.replace(/^#+\s*/, "").trim().toLowerCase() === target);
+  if (start === -1) return markdown;
+
+  let end = start + 1;
+  while (end < lines.length && !/^#{1,3}\s+/.test(lines[end].trim())) end += 1;
+  return [...lines.slice(0, start), ...lines.slice(end)].join("\n").trim();
+}
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -91,9 +143,16 @@ export function blogMarkdownToHtml(markdown: string) {
       continue;
     }
     closeList();
-    if (/^###\s+/.test(trimmed)) html.push(`<h3>${formatInline(trimmed.slice(4))}</h3>`);
-    else if (/^##\s+/.test(trimmed)) html.push(`<h2>${formatInline(trimmed.slice(3))}</h2>`);
-    else if (/^#\s+/.test(trimmed)) html.push(`<h2>${formatInline(trimmed.slice(2))}</h2>`);
+    if (/^###\s+/.test(trimmed)) {
+      const title = trimmed.slice(4);
+      html.push(`<h3 id="${blogHeadingId(title)}">${formatInline(title)}</h3>`);
+    } else if (/^##\s+/.test(trimmed)) {
+      const title = trimmed.slice(3);
+      html.push(`<h2 id="${blogHeadingId(title)}">${formatInline(title)}</h2>`);
+    } else if (/^#\s+/.test(trimmed)) {
+      const title = trimmed.slice(2);
+      html.push(`<h2 id="${blogHeadingId(title)}">${formatInline(title)}</h2>`);
+    }
     else if (/^---+$/.test(trimmed)) html.push("<hr />");
     else html.push(`<p>${formatInline(trimmed)}</p>`);
   }
