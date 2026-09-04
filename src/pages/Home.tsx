@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoModal from "../components/VideoModal";
+import { fetchTenantBlogs, type BlogPost } from "../services/blogApi";
 
 export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [isBlogsLoading, setIsBlogsLoading] = useState(true);
   const heroSlides = [
     {
       bg: "/assets/images/home-one/hero/hero-bg1.jpg",
@@ -13,6 +16,13 @@ export default function Home() {
       desc: "Delivering bespoke industrial real estate advisory, asset acquisition, corporate leasing, and transaction structuring across Sitapura and Jaipur's premier manufacturing corridors.",
     },
   ];
+
+  useEffect(() => {
+    fetchTenantBlogs()
+      .then((posts) => setBlogPosts(posts.slice(0, 3)))
+      .catch(() => setBlogPosts([]))
+      .finally(() => setIsBlogsLoading(false));
+  }, []);
 
   return (
     <>
@@ -1372,88 +1382,36 @@ export default function Home() {
               </div>
             </div>
             <div className="row">
-              <div className="col-xl-4 col-md-6 col-sm-12">
-                <div className="renvia-blog-post-item style-one mb-40">
-                  <div className="post-thumbnail">
-                    <img
-                      src="/assets/images/home-one/blog/blog-img1.jpg"
-                      alt="blog grid"
-                    />
-                  </div>
-                  <div className="post-content">
-                    <div className="post-tags">
-                      <span>
-                        <Link to="/blog-grid">Company insights</Link>
-                      </span>
-                    </div>
-                    <h4 className="title">
-                      <Link to="/blog-details">
-                        Signet Breaks Ground on Foundry Lofts in Midtown
-                        Cleveland
+              {isBlogsLoading && <p className="text-center">Loading blog posts...</p>}
+              {!isBlogsLoading && blogPosts.length === 0 && (
+                <p className="text-center">No blog posts are available yet.</p>
+              )}
+              {!isBlogsLoading && blogPosts.map((post) => (
+                <div className="col-xl-4 col-md-6 col-sm-12" key={post.id}>
+                  <div className="renvia-blog-post-item style-one mb-40">
+                    {post.image && (
+                      <div className="post-thumbnail">
+                        <img src={post.image} alt={post.title} />
+                      </div>
+                    )}
+                    <div className="post-content">
+                      <div className="post-tags">
+                        <span>
+                          <Link to={`/blog-grid?category=${encodeURIComponent(post.category)}`}>
+                            {post.category || "Insights"}
+                          </Link>
+                        </span>
+                      </div>
+                      <h4 className="title">
+                        <Link to={`/blog-details/${post.slug || post.id}`}>{post.title}</Link>
+                      </h4>
+                      <Link to={`/blog-details/${post.slug || post.id}`} className="read-more style-one">
+                        Read Details <i className="far fa-arrow-right" />
                       </Link>
-                    </h4>
-                    <Link to="/blog-details" className="read-more style-one">
-                      Read Details
-                      <i className="far fa-arrow-right" />
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="col-xl-4 col-md-6 col-sm-12">
-                <div className="renvia-blog-post-item style-one mb-40">
-                  <div className="post-thumbnail">
-                    <img
-                      src="/assets/images/home-one/blog/blog-img2.jpg"
-                      alt="blog grid"
-                    />
-                  </div>
-                  <div className="post-content">
-                    <div className="post-tags">
-                      <span>
-                        <Link to="/blog-grid">Company insights</Link>
-                      </span>
-                    </div>
-                    <h4 className="title">
-                      <Link to="/blog-details">
-                        Transforming Communities The Impact of a Dedicated Real
-                        Estate
-                      </Link>
-                    </h4>
-                    <Link to="/blog-details" className="read-more style-one">
-                      Read Details
-                      <i className="far fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xl-4 col-md-6 col-sm-12">
-                <div className="renvia-blog-post-item style-one mb-40">
-                  <div className="post-thumbnail">
-                    <img
-                      src="/assets/images/home-one/blog/blog-img3.jpg"
-                      alt="blog grid"
-                    />
-                  </div>
-                  <div className="post-content">
-                    <div className="post-tags">
-                      <span>
-                        <Link to="/blog-grid">Company insights</Link>
-                      </span>
-                    </div>
-                    <h4 className="title">
-                      <Link to="/blog-details">
-                        Sustainable Architecture: The Future of Urban Living
-                      </Link>
-                    </h4>
-                    <Link to="/blog-details" className="read-more style-one">
-                      Read Details
-                      <i className="far fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

@@ -10,6 +10,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
     setSubmitError("");
 
@@ -39,7 +40,7 @@ export default function Contact() {
       }
 
       setFormSent(true);
-      e.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setSubmitError(error instanceof Error ? error.message : "Unable to submit your advisory request.");
     } finally {
