@@ -323,16 +323,12 @@ export default function Services() {
                           <h5>Email</h5>
 
                           <p>
-                            <a href="mailto:info@company.com">
-                              info@company.com
+                            <a href="mailto:manghranirealestate@gmail.com">
+                              manghranirealestate@gmail.com
                             </a>
                           </p>
 
-                          <p>
-                            <a href="mailto:renvia.info@gmail.com">
-                              renvia.info@gmail.com
-                            </a>
-                          </p>
+                          
 
                         </div>
 
